@@ -1,5 +1,5 @@
 {
-  "name": "sample01",
+  "name": "jibmodel",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,26 +11,30 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@fontsource/roboto": "^4.5.8",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.2",
+    "@mui/styled-engine-sc": "^5.12.0",
     "antd": "^5.4.6",
     "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
+    "styled-components": "^5.3.10",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
     "@vitejs/plugin-react": "^4.0.0",
-    "eslint": "^8.38.0",
+    "eslint": "^8.39.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.3.4",
-    "vite": "^4.3.2"
+    "eslint-plugin-react-refresh": "^0.3.5",
+    "vite": "^4.3.3"
   }
 }

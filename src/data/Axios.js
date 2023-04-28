@@ -17,9 +17,6 @@ const Getdata = async () => {
 };
 
 const Postdata = async () => {
-    try {
-        
-    } catch (error) {
-        
-    }
-}
+  try {
+  } catch (error) {}
+};

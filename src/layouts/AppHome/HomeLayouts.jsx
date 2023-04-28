@@ -1,34 +1,47 @@
 import React from "react";
-import { Carousel } from "antd";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Col, Row, Carousel } from "antd";
+import { useNavigate } from "react-router-dom";
 
 import "../layouts.css";
 
 function HomeLayouts() {
+  const navigate = useNavigate();
+  const NavigateTo = (urlpath) => {
+    navigate("/" + urlpath.toLocaleLowerCase());
+  };
+
   return (
-    <div className="CarouselLayout">
-      <Row className="HomeBody">
-        <Row>
-          <Col className="border">
-            <Carousel effect="fade" autoplay>
+    <Col className="HomeBody">
+      <Row className="HeadBody">
+        <Col span={10} style={{ padding: 5 }}>
+          <Carousel autoplay>
+            <div>
+              <img src="/images/Home1.webp" alt="" className="ImgHome" />
+            </div>
+            <div>
+              <img src="/images/Home2.webp" alt="" className="ImgHome" />
+            </div>
+          </Carousel>
+        </Col>
+        <Col span={5} style={{ padding: 5 }}>
+          <div>
+            <img src="/images/Home3.webp" alt="" className="ImgHome" />
+          </div>
+        </Col>
+        <Col span={9} style={{ padding: 5 }}>
+            <Col span={15}>
               <div>
-                <img src="/images/Home1.webp" alt="" />
+                <img src="/images/Home7.webp" alt="" className="ImgHome2"/>
               </div>
-              <div>
-                <img src="/images/Home2.webp" alt="" />
-              </div>
-            </Carousel>
-          </Col>
-          <Col></Col>
-        </Row>
-        <Row>
-          <Col span={24}>
-            <img src="/images/title_bar.webp" alt="" className="ImgHome" />
-          </Col>
-        </Row>
+            </Col>
+        </Col>
       </Row>
-    </div>
+      <Row>
+        <Col span={24}>
+          <img src="/images/title_bar.webp" alt="" className="Titlebar" />
+        </Col>
+      </Row>
+    </Col>
   );
 }
 

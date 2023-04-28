@@ -5,6 +5,7 @@ import "./App.css";
 
 import AppHeader from "./layouts/AppHeader/AppHeader";
 import HomeLayouts from "./layouts/AppHome/HomeLayouts";
+import AppLogin from "./layouts/AppLogin/AppLogin";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<HomeLayouts />} />
+        <Route path="/login" element={<AppLogin />} />
+
       </Routes>
     </div>
   );
