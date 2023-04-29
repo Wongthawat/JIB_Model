@@ -50,7 +50,7 @@ p {
 .ImgHome2 {
   width: 100%;
   min-height: 200px;
-  max-height: 225px;
+  max-height: 220px;
 }
 
 .ImgHome3 {
@@ -69,7 +69,7 @@ p {
 .BodyBaner {
   padding: 5px;
   /* border: 1px solid black; */
-  max-height: 440px;
+  max-height: 400px;
 }
 
 .HeadBody {
