@@ -8,10 +8,12 @@ import HomeLayouts from "./layouts/AppHome/HomeLayouts";
 import AppLogin from "./layouts/AppLogin/AppLogin";
 import FooterPage from "./layouts/Footer/FooterPage"
 import NavbarPage from "./layouts/Navbar/NavbarPage";
+import NavbarHead from "./layouts/Navbar/NavbarHead"
 
 function App() {
   return (
     <div>
+      <NavbarHead />
       <AppHeader />
       <NavbarPage />
       <Routes>

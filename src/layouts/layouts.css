@@ -62,6 +62,8 @@ span {
   width: 100%;
 }
 
+/* -------------------------------------------- */
+
 .border {
   border: 1px solid black;
 }
@@ -107,6 +109,8 @@ span {
   width: 100%;
 }
 
+/* -------------------------------------------- */
+
 .FooterBody {
   background-color: #666666;
   margin-top: 1%;
@@ -132,6 +136,8 @@ span {
   color: #ffffff;
 }
 
+/* -------------------------------------------- */
+
 .NavbarStyle {
   justify-content: center;
 }
@@ -139,4 +145,22 @@ span {
 .NavFonts {
   margin: 0.3%;
   color: black;
+}
+
+.BodyNavHead {
+  height: 40px;
+  background-color: #2c3d92;
+  /* border: 1px solid black; */
+}
+
+.NavbarHead {
+  justify-content: right;
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+
+.NavFontsHd {
+  margin-left: 0.3%;
+  color: #ffffff;
 }
