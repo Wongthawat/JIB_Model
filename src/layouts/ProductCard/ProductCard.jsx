@@ -1,14 +1,72 @@
-import React from "react";
-import { Col, Row, Carousel } from "antd";
-// import ProductAxios from ".../data/Axios.js"
+import React, { useEffect, useState } from "react";
+import { Collapse, Card, Button } from "antd";
+import axios from "axios";
+import Slider from "react-slick";
+// import Card from "react-bootstrap/Card";
+import "./slick.css";
+import "./slick-theme.css";
 
-function ProductCard() {
+function ProductCard(props) {
+  const { Panel } = Collapse;
+  const { Meta } = Card;
+  const baseURL = "https://www.melivecode.com/api/attractions";
+  const [items, setItems] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    GetProData();
+  }, []);
+
+  const GetProData = async () => {
+    try {
+      const response = await axios.get(`${baseURL}`);
+      if (response.status === 200) {
+        setItems(response?.data);
+        console.log(response?.data);
+      }
+    } catch (error) {}
+  };
+  
+  const settings = {
+    dots: true,
+    Infinity: true,
+    speed: 2000,
+    autoplay: true,
+    slidesToShow: 6,
+    slidesToScroil: 4,
+  };
+
   return (
-    <Row>
-      <Col>
-        <Row></Row>
-      </Col>
-    </Row>
+    <div className="BodyAllCard">
+      <Slider {...settings}>
+        {items.map((Get, key) => (
+          <Card
+            hoverable
+            cover={<img alt="example" src={Get.coverimage} />}
+            className="BodyCard"
+          >
+            <div>
+              <Button className="BodyBtn" type="ghost">
+                ซื้อ
+              </Button>
+            </div>
+            <hr />
+            <div>
+              <Collapse defaultActiveKey={["1"]} ghost>
+                <Panel header={Get.name}>
+                  <p>{Get.detail}</p>
+                </Panel>
+              </Collapse>
+            </div>
+            <hr />
+            <div className="PriceBody">
+              <span>ราคา</span>
+              <span className="PriceBuy">{Get.id} .-</span>
+            </div>
+          </Card>
+        ))}
+      </Slider>
+    </div>
   );
 }
 

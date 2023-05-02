@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import "../layouts.css";
 import ListProduct from "../../data/ProductData";
+import ProductCard from "../ProductCard/ProductCard";
 
 function HomeLayouts() {
   const navigate = useNavigate();
@@ -48,9 +49,18 @@ function HomeLayouts() {
       </Row>
       <Row>
         <Col span={24}>
-          <img src="/images/title_bar.webp" alt="" className="Titlebar" />
+          <img src="/images/title_bar2.webp" alt="" className="Titlebar" />
         </Col>
       </Row>
+      <Col className="">
+        <ProductCard />
+      </Col>
+      <Row>
+        <img src="/images/title_bar.webp" alt="" className="Titlebar" />
+      </Row>
+      <Col>
+        <ProductCard />
+      </Col>
     </Col>
   );
 }
