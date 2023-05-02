@@ -3,7 +3,7 @@ import { Col, Row, Carousel } from "antd";
 import { useNavigate } from "react-router-dom";
 
 import "../layouts.css";
-import ListProduct from "../../data/ProductData";
+import ListProduct from "../ProductCard/ProductData";
 import ProductCard from "../ProductCard/ProductCard";
 
 function HomeLayouts() {

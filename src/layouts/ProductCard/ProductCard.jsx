@@ -6,9 +6,9 @@ import Slider from "react-slick";
 import "./slick.css";
 import "./slick-theme.css";
 
-function ProductCard(props) {
+function ProductCard() {
   const { Panel } = Collapse;
-  const { Meta } = Card;
+  // const { Meta } = Card;
   const baseURL = "https://www.melivecode.com/api/attractions";
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
@@ -24,7 +24,9 @@ function ProductCard(props) {
         setItems(response?.data);
         console.log(response?.data);
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error)
+    }
   };
   
   const settings = {
@@ -41,6 +43,7 @@ function ProductCard(props) {
       <Slider {...settings}>
         {items.map((Get, key) => (
           <Card
+            key={key}
             hoverable
             cover={<img alt="example" src={Get.coverimage} />}
             className="BodyCard"

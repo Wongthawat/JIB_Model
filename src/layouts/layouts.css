@@ -28,7 +28,8 @@
   color: #ffffff;
 }
 
-p, span {
+p,
+span {
   font-family: "Mitr", sans-serif;
 }
 
@@ -36,7 +37,6 @@ p, span {
 .HomeBody {
   background-color: #ffffff;
   padding: 0.5%;
-  margin-top: 1%;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -107,3 +107,36 @@ p, span {
   width: 100%;
 }
 
+.FooterBody {
+  background-color: #666666;
+  margin-top: 1%;
+  /* padding-bottom: 10%; */
+  /* margin-left: 10%;
+  margin-right: 10%; */
+}
+
+.StyFooter {
+  text-align: center;
+  background-color: #313131;
+  color: #ffffff;
+}
+
+.BodyHeadFoot {
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  padding-top: 1%;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-top: 4px solid #2c3d92;
+  color: #ffffff;
+}
+
+.NavbarStyle {
+  justify-content: center;
+}
+
+.NavFonts {
+  margin: 0.3%;
+  color: black;
+}

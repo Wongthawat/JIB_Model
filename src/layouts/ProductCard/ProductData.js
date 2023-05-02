@@ -82,33 +82,3 @@ const ListProduct = {
 };
 
 export default ListProduct
-
-// const PictureList = [
-//     {
-//         id: "3",
-//         nameProduct: "HP",
-//         ImgList: "/images/Home3.webp"
-//     },
-//     {
-//         id: "4",
-//         nameProduct: "HP",
-//         ImgList: "/images/Home4.webp"
-//     },
-//     {
-//         id: "5",
-//         nameProduct: "HP",
-//         ImgList: "/images/Home5.webp"
-//     },
-//     {
-//         id: "6",
-//         nameProduct: "HP",
-//         ImgList: "/images/Home6.webp"
-//     },
-//     {
-//         id: "7",
-//         nameProduct: "HP",
-//         ImgList: "/images/Home2.webp"
-//     },
-// ]
-
-// export default PictureList
