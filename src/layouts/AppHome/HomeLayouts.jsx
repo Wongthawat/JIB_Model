@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row, Carousel } from "antd";
 // import { useNavigate } from "react-router-dom";
 
@@ -22,7 +22,11 @@ function HomeLayouts() {
           <Carousel autoplay effect="fade">
             {ListProduct.ListProImg.map((Get) => (
               <div key={Get.id}>
-                <img src={Get.PictureProduct} alt="" className="w-100 img-450" />
+                <img
+                  src={Get.PictureProduct}
+                  alt=""
+                  className="w-100 img-450"
+                />
               </div>
             ))}
           </Carousel>
@@ -31,7 +35,11 @@ function HomeLayouts() {
           <Carousel autoplay effect="fade">
             {ListProduct.ListProImg2.map((Get) => (
               <div key={Get.id}>
-                <img src={Get.PictureProduct} alt="" className="w-100 img-450" />
+                <img
+                  src={Get.PictureProduct}
+                  alt=""
+                  className="w-100 img-450"
+                />
               </div>
             ))}
           </Carousel>
