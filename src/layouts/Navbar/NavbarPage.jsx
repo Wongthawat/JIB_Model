@@ -16,9 +16,9 @@ function NavbarPage() {
   return (
     <Navbar bg="light" variant="light">
       <Nav className="me-auto">
-        <Row className="NavbarStyle">
+        <Row className="justify-center">
           {NavbarData.ListBar.map((Get, key) => (
-            <a className="NavFonts" key={key} onClick={() => NavigateTo(Get.list)}>
+            <a className="px-3 text-dark" key={key} onClick={() => NavigateTo(Get.list)}>
               <p>{Get.name}</p>
             </a>
           ))}

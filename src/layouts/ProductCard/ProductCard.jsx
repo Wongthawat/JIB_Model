@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Collapse, Card, Button } from "antd";
 import axios from "axios";
 import Slider from "react-slick";
-// import Card from "react-bootstrap/Card";
+
 import "./slick.css";
 import "./slick-theme.css";
 
@@ -32,24 +32,24 @@ function ProductCard() {
   const settings = {
     dots: true,
     Infinity: true,
-    speed: 2000,
+    speed: 2500,
     autoplay: true,
     slidesToShow: 6,
     slidesToScroil: 4,
   };
 
   return (
-    <div className="BodyAllCard">
+    <div className="w-100 mb-5">
       <Slider {...settings}>
         {items.map((Get, key) => (
           <Card
             key={key}
             hoverable
             cover={<img alt="example" src={Get.coverimage} />}
-            className="BodyCard"
+            className="pa-1 border-dark min-height-450"
           >
             <div>
-              <Button className="BodyBtn" type="ghost">
+              <Button className="text-white w-100" type="primary" danger>
                 หยิบใส่ตะกร้า
               </Button>
             </div>
@@ -62,9 +62,9 @@ function ProductCard() {
               </Collapse>
             </div>
             <hr />
-            <div className="PriceBody">
+            <div className="text-right">
               <span>ราคา</span>
-              <span className="PriceBuy">{Get.id} .-</span>
+              <span className="ml-3 font-weight-bold text-danger">{Get.id} .-</span>
             </div>
           </Card>
         ))}

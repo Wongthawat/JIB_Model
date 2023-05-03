@@ -6,10 +6,10 @@ function FooterPage() {
   const { Footer } = Layout;
 
   return (
-    <Col className="FooterBody">
-      <Row className="BodyHeadFoot">
-        {FooterData.headFooter.map((Get, Key) => (
-          <Col span={4} key={Get.id}>
+    <Col className="bg-dove-gray text-center mt-1">
+      <Row className="justify-center align-center text-white pxp-10 border-top-bay-of-many">
+        {FooterData.headFooter.map((Get, key) => (
+          <Col span={4} key={key}>
             <p>{Get.name}</p>
             <li>
               <p></p>
@@ -18,8 +18,8 @@ function FooterPage() {
         ))}
       </Row>
       {/* <hr /> */}
-      <Footer className="StyFooter">
-        2023 JIB COMPUTER GROUP All rights reserved
+      <Footer className="bg-mine-shaft text-white py-1">
+        <p>2023 JIB COMPUTER GROUP All rights reserved</p>
       </Footer>
     </Col>
   );

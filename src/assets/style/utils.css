@@ -87,6 +87,10 @@ a.text-dark:focus {
   color: white !important;
 }
 
+.text-danger {
+  color: red;
+}
+
 .text-hide {
   font: 0/0 a;
   color: transparent;
@@ -577,3 +581,28 @@ a.text-dark:focus {
 .ant-row {
   width: 100% !important;
 }
+
+.bg-dove-gray {
+  background-color: #666666;
+}
+
+.bg-mine-shaft {
+  background-color: #313131;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.border-top-bay-of-many {
+  border-top: 4px solid #2c3d92;
+}
+
+.min-height-450 {
+  min-height: 450px;
+}
+

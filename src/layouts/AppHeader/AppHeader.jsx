@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Col, Row, Input, Popover, Badge } from "antd";
-import { ShoppingCartOutlined } from "@ant-design/icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faLine } from "@fortawesome/free-brands-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import NavbarHeadData from "../Navbar/NavbarHeadData";
 
@@ -14,20 +16,20 @@ const { Search } = Input;
 
 const Title = (
   <div>
-    <p>{"รายการสินค้า"}</p>
+    <span>{"รายการสินค้า"}</span>
   </div>
 );
 
 const ListOrder = (
   <div>
     <hr />
-    <div>
+    <div className="wp-300">
       <Row>
         <Col span={18}>
-          <p>{"คอมพิวเตอร์"}</p>
+          <span>{"คอมพิวเตอร์"}</span>
         </Col>
         <Col span={6}>
-          <p>{"19,400"}</p>
+          <span>{"19,400"}</span>
         </Col>
       </Row>
     </div>
@@ -43,34 +45,34 @@ function AppHeader() {
   return (
     <Row>
       <Col className="ContainerHeader">
-        <Row className="BodyHeader">
-          <Col span={3} className="LogoBody">
+        <Row className="justify-center align-center">
+          <Col span={3} className="justify-center text-center">
             <a href="">
               <img
                 alt=""
                 src={"/images/logo-w.webp"}
-                className="ImgLogo"
+                className="wp-120"
                 onClick={() => NavigateTo("home")}
               />
             </a>
           </Col>
-          <Col span={14} className="SearchBar">
+          <Col span={14} className="pa-4">
             <Search placeholder={"ค้นหารายการ"} />
           </Col>
-          <Col span={1} className="IconShipping">
+          <Col span={1}>
             <Badge count={1}>
               <Popover content={ListOrder} title={Title}>
                 <a href="#">
-                  <ShoppingCartOutlined className="SizeIcon" />
+                  <FontAwesomeIcon icon={faCartShopping} size="2xl" className="text-white" />
                 </a>
               </Popover>
             </Badge>
           </Col>
-          <Col span={3} className="TextRL">
-            <Row className="TextStyRL">
+          <Col span={3}>
+            <Row className="justify-center">
               {NavbarHeadData.ListBar.map((Get, key) => (
                 <a
-                  className="FontsRL"
+                  className="pxp-5 text-white"
                   key={key}
                   onClick={() => NavigateTo(Get.list)}
                 >

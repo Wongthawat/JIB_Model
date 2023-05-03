@@ -9,7 +9,7 @@ const ListProduct = {
         },
         {
             id: "2",
-            name: "ComSet Maru",
+            name: "Rewards2023",
             PictureProduct: "/images/Home2.webp"
         },
         {
@@ -18,66 +18,27 @@ const ListProduct = {
             PictureProduct: "/images/Home12.webp"
         }
     ],
-    'ListImg': [
+    'ListProImg2': [
         {
             id: "1",
-            name: "HP",
-            ImgList: "/images/Home3.webp"
+            name: "KrungSri",
+            PictureProduct: "/images/Home16.webp"
         },
         {
             id: "2",
-            name: "HP",
-            ImgList: "/images/Home4.webp"
+            name: "BackToSchool",
+            PictureProduct: "/images/Home17.webp"
         },
         {
             id: "3",
-            name: "HP",
-            ImgList: "/images/Home5.webp"
+            name: "AMD Ryzen",
+            PictureProduct: "/images/Home18.webp"
         },
         {
             id: "4",
-            name: "HP",
-            ImgList: "/images/Home6.webp"
-        },
-        {
-            id: "5",
-            name: "HP",
-            ImgList: "/images/Home7.webp"
-        },
-    ],
-    'Baner': [
-        {
-            id: "1",
-            name: "Promotion Computer Set",
-            ImgBaner: "/images/Home10.webp"
-        },
-        {
-            id: "2",
-            name: "Computer Set",
-            ImgBaner: "/images/Home11.webp"
-        },
-        {
-            id: "3",
-            name: "Combo Set",
-            ImgBaner: "/images/Home8.webp"
-        },
-    ],
-    'Baner2': [
-        {
-            id: "1",
-            name: "Promotion Computer Set",
-            ImgBaner: "/images/Home13.webp"
-        },
-        {
-            id: "2",
-            name: "Computer Set",
-            ImgBaner: "/images/Home14.jpg"
-        },
-        {
-            id: "3",
-            name: "Combo Set",
-            ImgBaner: "/images/Home15.webp"
-        },
+            name: "KeyBoard",
+            PictureProduct: "/images/Home19.webp"
+        }
     ],
 };
 

@@ -16,10 +16,10 @@ function HomeLayouts() {
   // };
 
   return (
-    <Col className="mxp-10 FormContainer pa-1">
+    <Col className="mxp-10 text-center pa-1 bg-white">
       <Row className="w-100 h-100 pt-2">
         <Col span={10} className="">
-          <Carousel autoplay>
+          <Carousel autoplay effect="fade">
             {ListProduct.ListProImg.map((Get) => (
               <div key={Get.id}>
                 <img src={Get.PictureProduct} alt="" className="w-100 img-450" />
@@ -28,8 +28,8 @@ function HomeLayouts() {
           </Carousel>
         </Col>
         <Col span={10} className="w-100">
-          <Carousel autoplay>
-            {ListProduct.ListProImg.map((Get) => (
+          <Carousel autoplay effect="fade">
+            {ListProduct.ListProImg2.map((Get) => (
               <div key={Get.id}>
                 <img src={Get.PictureProduct} alt="" className="w-100 img-450" />
               </div>
@@ -44,14 +44,14 @@ function HomeLayouts() {
       </Row>
       <Row>
         <Col span={24}>
-          <img src="/images/title_bar2.webp" alt="" className="Titlebar" />
+          <img src="/images/title_bar2.webp" alt="" className="w-100 mt-1" />
         </Col>
       </Row>
       <Col className="">
         <ProductCard />
       </Col>
       <Row>
-        <img src="/images/title_bar.webp" alt="" className="Titlebar" />
+        <img src="/images/title_bar.webp" alt="" className="w-100 mt-1" />
       </Row>
       <Col>
         <ProductCard />

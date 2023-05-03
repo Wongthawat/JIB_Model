@@ -8,13 +8,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faUserLarge } from "@fortawesome/free-solid-svg-icons";
 
-import "../../assets/style/spacing.css";
-import "../../assets/style/global.css";
-import "../../assets/style/utils.css";
-
 function AppLogin() {
   return (
-    <Col className="mxp-10 FormContainer">
+    <Col className="mxp-10 mb-12 bg-white text-center">
       <Row className="">
         <Divider>
           <h2>หน้าเข้าสู่ระบบ</h2>
