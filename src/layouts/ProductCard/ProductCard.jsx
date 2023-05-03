@@ -50,7 +50,7 @@ function ProductCard() {
           >
             <div>
               <Button className="BodyBtn" type="ghost">
-                ซื้อ
+                หยิบใส่ตะกร้า
               </Button>
             </div>
             <hr />

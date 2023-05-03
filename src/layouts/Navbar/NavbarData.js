@@ -16,7 +16,7 @@ const ListNavbar = {
         },
         {
             id: "3",
-            name: "สเปคคอมพิวเตอร์",
+            name: "จัดสเปคคอมพิวเตอร์",
             list: "ComputerSpec"
 
         },

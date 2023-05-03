@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Col, Row, Input, Popover, Badge } from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import NavbarHeadData from "../Navbar/NavbarHeadData";
 
 // CSS
 import "../layouts.css";
@@ -10,6 +11,12 @@ const { Search } = Input;
 // const [order, setOrder] = useState(localStorage.getItem("Order"));
 // const [ordername, setOrdername] = useState("Hi");
 // const [orderSelecte, setSelect] = useState(0);
+
+const Title = (
+  <div>
+    <p>{"รายการสินค้า"}</p>
+  </div>
+);
 
 const ListOrder = (
   <div>
@@ -47,17 +54,30 @@ function AppHeader() {
               />
             </a>
           </Col>
-          <Col span={16} style={{ padding: 20 }}>
+          <Col span={14} className="SearchBar">
             <Search placeholder={"ค้นหารายการ"} />
           </Col>
-          <Col span={3}>
+          <Col span={1} className="IconShipping">
             <Badge count={1}>
-              <Popover content={ListOrder} title="รายการสินค้า">
+              <Popover content={ListOrder} title={Title}>
                 <a href="#">
                   <ShoppingCartOutlined className="SizeIcon" />
                 </a>
               </Popover>
             </Badge>
+          </Col>
+          <Col span={3} className="TextRL">
+            <Row className="TextStyRL">
+              {NavbarHeadData.ListBar.map((Get, key) => (
+                <a
+                  className="FontsRL"
+                  key={key}
+                  onClick={() => NavigateTo(Get.list)}
+                >
+                  <p>{Get.name}</p>
+                </a>
+              ))}
+            </Row>
           </Col>
         </Row>
       </Col>
