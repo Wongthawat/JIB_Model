@@ -3,7 +3,7 @@ import { Card, Button } from "react-bootstrap";
 import axios from "axios";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, History } from "swiper";
+import { Navigation, Pagination, History, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -34,6 +34,10 @@ function ProductCard() {
       slidesPerView={4}
       spaceBetween={5}
       navigation={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       pagination={{
         type: "fraction",
       }}
@@ -59,7 +63,7 @@ function ProductCard() {
           spaceBetween: 5,
         },
       }}
-      modules={[Pagination, History, Navigation]}
+      modules={[Pagination, History, Navigation, Autoplay]}
       className="mySwiper"
     >
       {/* {items.map((Get, index) => (
