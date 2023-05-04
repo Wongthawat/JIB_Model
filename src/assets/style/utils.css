@@ -1,3 +1,12 @@
+p,
+span,
+h1,
+h2,
+h3,
+label,
+Footer {
+  font-family: "Mitr", sans-serif;
+}
 /* Text */
 .text-left {
   text-align: left !important;
@@ -598,11 +607,26 @@ a.text-dark:focus {
   background-color: black;
 }
 
+.bg-jib {
+  background-color: #2c3d92;
+}
+
 .border-top-bay-of-many {
   border-top: 4px solid #2c3d92;
+}
+
+.max-width-100 {
+  max-width: 100px;
+}
+
+.max-height-100 {
+  max-height: 100px;
+}
+
+.min-height-100 {
+  min-height: 100px;
 }
 
 .min-height-450 {
   min-height: 450px;
 }
-

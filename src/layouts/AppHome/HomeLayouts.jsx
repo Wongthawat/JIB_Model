@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-import { Col, Row, Carousel } from "antd";
+import {
+  Navbar,
+  Nav,
+  Form,
+  FormControl,
+  Row,
+  Col,
+  Container,
+} from "react-bootstrap";
+import { Carousel } from "antd";
 // import { useNavigate } from "react-router-dom";
 
 import "../../assets/style/spacing.css";
@@ -16,55 +25,52 @@ function HomeLayouts() {
   // };
 
   return (
-    <Col className="mxp-10 text-center pa-1 bg-white">
-      <Row className="w-100 h-100 pt-2">
-        <Col span={10} className="">
+    <div className="mxp-10 text-center bg-white">
+      <Row className="w-100 mx-0">
+        <Col className="w-25 px-0">
           <Carousel autoplay effect="fade">
             {ListProduct.ListProImg.map((Get) => (
               <div key={Get.id}>
-                <img
-                  src={Get.PictureProduct}
-                  alt=""
-                  className="w-100 img-450"
-                />
+                <img src={Get.PictureProduct} alt="" className="w-100 pa-1" />
               </div>
             ))}
           </Carousel>
         </Col>
-        <Col span={10} className="w-100">
+        <Col className="w-25 px-0">
           <Carousel autoplay effect="fade">
             {ListProduct.ListProImg2.map((Get) => (
               <div key={Get.id}>
-                <img
-                  src={Get.PictureProduct}
-                  alt=""
-                  className="w-100 img-450"
-                />
+                <img src={Get.PictureProduct} alt="" className="w-100 pa-1" />
               </div>
             ))}
           </Carousel>
         </Col>
-        <Col span={4} className="w-100">
-          <div className="">
-            <img src="/images/img_tab.webp" alt="" className="img-450" />
-          </div>
+        <Col className="w-25 px-0">
+          <Carousel autoplay effect="fade">
+            {ListProduct.ListProImg2.map((Get) => (
+              <div key={Get.id}>
+                <img src={Get.PictureProduct} alt="" className="w-100 pa-1" />
+              </div>
+            ))}
+          </Carousel>
         </Col>
       </Row>
-      <Row>
-        <Col span={24}>
-          <img src="/images/title_bar2.webp" alt="" className="w-100 mt-1" />
+      <Row className="w-100 px-0 mx-0 mb-1">
+        <Col className="w-100 px-0 mx-0">
+          <img src="/images/title_bar2.webp" alt="" className="w-100" />
         </Col>
       </Row>
-      <Col className="">
-        <ProductCard />
-      </Col>
-      <Row>
-        <img src="/images/title_bar.webp" alt="" className="w-100 mt-1" />
+      <Row className="px-0 mx-0">
+        <Col className="">
+          <ProductCard />
+        </Col>
       </Row>
-      <Col>
-        <ProductCard />
-      </Col>
-    </Col>
+      <Row className="w-100 px-0 mx-0 mb-1">
+        <Col className="w-100 px-0 mx-0">
+          <img src="/images/title_bar.webp" alt="" className="w-100 mt-1" />
+        </Col>
+      </Row>
+    </div>
   );
 }
 

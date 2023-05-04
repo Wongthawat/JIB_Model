@@ -1,30 +1,52 @@
 import React from "react";
-import { Row } from "antd";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { Navbar, Nav, Form, FormControl } from "react-bootstrap";
 import NavbarData from "./NavbarData";
 import { useNavigate } from "react-router-dom";
 
-
 function NavbarPage() {
-
   const navigate = useNavigate();
   const NavigateTo = (urlpath) => {
     navigate("/" + urlpath.toLocaleLowerCase());
   };
 
   return (
-    <Navbar bg="light" variant="light">
-      <Nav className="me-auto">
-        <Row className="justify-center">
-          {NavbarData.ListBar.map((Get, key) => (
-            <a className="px-3 text-dark" key={key} onClick={() => NavigateTo(Get.list)}>
-              <p>{Get.name}</p>
-            </a>
-          ))}
-        </Row>
-      </Nav>
-    </Navbar>
+    <div className="pxp-10">
+      <Navbar expand="lg">
+        <Navbar.Toggle aria-controls="navbarScroll" className="mx-0 ml-auto w-100"/>
+        <Navbar.Collapse id="navbarScroll" className="">
+          <Nav
+            className="mr-auto my-2 my-lg-0 w-100"
+            style={{ maxHeight: "100px" }}
+            navbarScroll
+          >
+              {NavbarData.ListBar.map((Get, key) => (
+                <Nav.Link
+                  key={key}
+                  onClick={() => NavigateTo(Get.list)}
+                  className="font-size-s"
+                >
+                  {Get.name}
+                </Nav.Link>
+              ))}
+            {/* <Nav className="my-2 my-lg-0"> */}
+              <Nav.Link
+                className="font-size-s"
+                onClick={() => NavigateTo("register")}
+              >
+                สมัครสมาชิก
+              </Nav.Link>
+
+              <Nav.Link
+                className="font-size-s"
+                onClick={() => NavigateTo("login")}
+              >
+                เข้าสู่ระบบ
+              </Nav.Link>
+            {/* </Nav> */}
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </div>
   );
 }
 

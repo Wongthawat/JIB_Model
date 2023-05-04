@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Collapse, Card, Button } from "antd";
+import { Card, Button } from "react-bootstrap";
 import axios from "axios";
-import Slider from "react-slick";
 
-import "./slick.css";
-import "./slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, History } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 function ProductCard() {
-  const { Panel } = Collapse;
-  // const { Meta } = Card;
   const baseURL = "https://www.melivecode.com/api/attractions";
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
@@ -17,7 +17,7 @@ function ProductCard() {
     GetProData();
   }, []);
 
-  const GetProData = async () => {
+  const GetProData = async (props) => {
     try {
       const response = await axios.get(`${baseURL}`);
       if (response.status === 200) {
@@ -25,51 +25,71 @@ function ProductCard() {
         console.log(response?.data);
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  };
-  
-  const settings = {
-    dots: true,
-    Infinity: true,
-    speed: 2500,
-    autoplay: true,
-    slidesToShow: 6,
-    slidesToScroil: 4,
   };
 
   return (
-    <div className="w-100 mb-5">
-      <Slider {...settings}>
-        {items.map((Get, key) => (
-          <Card
-            key={key}
-            hoverable
-            cover={<img alt="example" src={Get.coverimage} />}
-            className="pa-1 border-dark min-height-450"
-          >
-            <div>
-              <Button className="text-white w-100" type="primary" danger>
-                หยิบใส่ตะกร้า
-              </Button>
-            </div>
-            <hr />
-            <div>
-              <Collapse defaultActiveKey={["1"]} ghost>
-                <Panel header={Get.name}>
-                  <p>{Get.detail}</p>
-                </Panel>
-              </Collapse>
-            </div>
-            <hr />
-            <div className="text-right">
-              <span>ราคา</span>
-              <span className="ml-3 font-weight-bold text-danger">{Get.id} .-</span>
-            </div>
+    <Swiper
+      slidesPerView={4}
+      spaceBetween={5}
+      navigation={true}
+      pagination={{
+        type: "fraction",
+      }}
+      loop={true}
+      history={{
+        key: "slide",
+      }}
+      breakpoints={{
+        200: {
+          slidesPerView: 1,
+          spaceBetween: 5,
+        },
+        490: {
+          slidesPerView: 2,
+          spaceBetween: 5,
+        },
+        600: {
+          slidesPerView: 3,
+          spaceBetween: 5,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 5,
+        },
+      }}
+      modules={[Pagination, History, Navigation]}
+      className="mySwiper"
+    >
+      {/* {items.map((Get, index) => (
+        <SwiperSlide>
+          <Card>
+            <Card.Img variant="top" src={Get.coverimage} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
           </Card>
-        ))}
-      </Slider>
-    </div>
+        </SwiperSlide>
+      ))} */}
+      {items.map((Get, index) => (
+      <SwiperSlide key={index}>
+        <Card className="">
+          <Card.Img src={Get.coverimage} className="pa-1"/>
+          <Card.Body>
+            <Card.Title>{Get.name}</Card.Title>
+            <Card.Text>{Get.detail}</Card.Text>
+            <Button>หยิบใส่ตะกร้า</Button>
+          </Card.Body>
+        </Card>
+      </SwiperSlide>
+      ))}
+    </Swiper>
   );
 }
 

@@ -1,15 +1,11 @@
-import React, { useState } from "react";
-import { Col, Row, Input, Popover, Badge } from "antd";
+import React from "react";
+import { Popover, Badge } from "antd";
+import { Navbar, Nav, Form, FormControl, Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faLine } from "@fortawesome/free-brands-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import NavbarHeadData from "../Navbar/NavbarHeadData";
 
-// CSS
-import "../layouts.css";
-
-const { Search } = Input;
 // const [order, setOrder] = useState(localStorage.getItem("Order"));
 // const [ordername, setOrdername] = useState("Hi");
 // const [orderSelecte, setSelect] = useState(0);
@@ -25,10 +21,10 @@ const ListOrder = (
     <hr />
     <div className="wp-300">
       <Row>
-        <Col span={18}>
+        <Col>
           <span>{"คอมพิวเตอร์"}</span>
         </Col>
-        <Col span={6}>
+        <Col md="auto">
           <span>{"19,400"}</span>
         </Col>
       </Row>
@@ -43,47 +39,45 @@ function AppHeader() {
     navigate("/" + urlpath.toLocaleLowerCase());
   };
   return (
-    <Row>
-      <Col className="ContainerHeader">
-        <Row className="justify-center align-center">
-          <Col span={3} className="justify-center text-center">
-            <a href="">
-              <img
-                alt=""
-                src={"/images/logo-w.webp"}
-                className="wp-120"
-                onClick={() => NavigateTo("home")}
+    <div>
+      <Navbar className="bg-jib pxp-10 max-height-100 w-100">
+        <Navbar.Brand className="">
+          <a href="">
+            <img
+              alt=""
+              src="/images/logo-w.webp"
+              className="max-width-100"
+              onClick={() => NavigateTo("home")}
+            />
+          </a>
+        </Navbar.Brand>
+        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" className="" /> */}
+        {/* <Navbar.Collapse id="basic-navbar-nav"> */}
+          <Nav className="m-auto w-75">
+            <Form className="w-75">
+              <FormControl
+                type="text"
+                placeholder="Search"
+                className="mr-sm-2"
               />
-            </a>
-          </Col>
-          <Col span={14} className="pa-4">
-            <Search placeholder={"ค้นหารายการ"} />
-          </Col>
-          <Col span={1}>
-            <Badge count={1}>
-              <Popover content={ListOrder} title={Title}>
-                <a href="#">
-                  <FontAwesomeIcon icon={faCartShopping} size="2xl" className="text-white" />
-                </a>
-              </Popover>
-            </Badge>
-          </Col>
-          <Col span={3}>
-            <Row className="justify-center">
-              {NavbarHeadData.ListBar.map((Get, key) => (
-                <a
-                  className="pxp-5 text-white"
-                  key={key}
-                  onClick={() => NavigateTo(Get.list)}
-                >
-                  <p>{Get.name}</p>
-                </a>
-              ))}
-            </Row>
-          </Col>
-        </Row>
-      </Col>
-    </Row>
+            </Form>
+            <Form inline className="pa-1 ml-5">
+              <Badge count={1}>
+                <Popover content={ListOrder} title={Title}>
+                  <a href="#">
+                    <FontAwesomeIcon
+                      icon={faCartShopping}
+                      size="2x"
+                      className="text-white"
+                    />
+                  </a>
+                </Popover>
+              </Badge>
+            </Form>
+          </Nav>
+        {/* </Navbar.Collapse> */}
+      </Navbar>
+    </div>
   );
 }
 
