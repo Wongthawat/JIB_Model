@@ -15,7 +15,7 @@ const ListProduct = {
         {
             id: "3",
             name: "MacBook Air M2",
-            PictureProduct: "/images/Home12.webp"
+            PictureProduct: "/images/Home3.webp"
         }
     ],
     'ListProImg2': [
@@ -33,11 +33,40 @@ const ListProduct = {
             id: "3",
             name: "AMD Ryzen",
             PictureProduct: "/images/Home18.webp"
+        }
+    ],
+    'ListProImg3': [
+        {
+            id: "1",
+            name: "number1",
+            PictureProduct: "/images/Home19.webp"
         },
         {
-            id: "4",
-            name: "KeyBoard",
-            PictureProduct: "/images/Home19.webp"
+            id: "2",
+            name: "number2",
+            PictureProduct: "/images/Home20.webp"
+        },
+        {
+            id: "3",
+            name: "number3",
+            PictureProduct: "/images/Home21.webp"
+        }
+    ],
+    'ListProImgTab': [
+        {
+            id: "1",
+            name: "number1",
+            PictureProduct: "/images/ImgTab1.webp"
+        },
+        {
+            id: "2",
+            name: "number2",
+            PictureProduct: "/images/ImgTab2.webp"
+        },
+        {
+            id: "3",
+            name: "number3",
+            PictureProduct: "/images/ImgTab3.webp"
         }
     ],
 };

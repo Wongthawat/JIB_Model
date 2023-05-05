@@ -480,6 +480,11 @@ a.text-dark:focus {
   height: auto;
 }
 
+.img-flix {
+  max-width: 100%;
+  height: fit-content;
+}
+
 .rounded {
   border-radius: 0.25rem !important;
 }
@@ -611,8 +616,12 @@ a.text-dark:focus {
   background-color: #2c3d92;
 }
 
-.border-top-bay-of-many {
-  border-top: 4px solid #2c3d92;
+.bg-jib-new {
+  background-color: #17254a;
+}
+
+.border-top-bg-jibnew-4 {
+  border-top: 4px solid #17254a;
 }
 
 .max-width-50 {
@@ -637,6 +646,10 @@ a.text-dark:focus {
 
 .max-height-200 {
   max-height: 200px;
+}
+
+.max-height-400 {
+  max-height: 400px;
 }
 
 .min-height-50 {

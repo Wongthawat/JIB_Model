@@ -50,27 +50,28 @@ function AppHeader() {
   };
   const LoginOrRegister = (
     <div className="wp-200">
-      <Col className="w-100">
+      <div className="col-md-12">
         <Button className="w-100" onClick={() => NavigateTo("login")}>
           <span className="font-size-s">เข้าสู่ระบบ</span>
         </Button>
-      </Col>
+      </div>
       <hr />
-      <Col className="w-100">
+      <div className="col-md-12">
         <Button className="w-100" onClick={() => NavigateTo("register")}>
           <span className="font-size-s">สมัครสมาชิก</span>
         </Button>
-      </Col>
+      </div>
     </div>
   );
+
   return (
     <div>
-      <Navbar className="bg-jib pxp-10 max-height-100 w-100">
+      <Navbar className="bg-jib-new pxp-10 max-height-100 w-100">
         <Navbar.Brand className="">
           <a href="">
             <img
               alt=""
-              src="/images/logo-w.webp"
+              src="/images/JIB.jpg"
               className="max-width-100"
               onClick={() => NavigateTo("home")}
             />

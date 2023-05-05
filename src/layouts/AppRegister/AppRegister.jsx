@@ -1,99 +1,79 @@
 import React from "react";
-import { Col, Row, Button, Input, Form, Divider, Select } from "antd";
+import { ThemeProvider, Form, Button, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLine,
+  faGooglePlusG,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
 import { faUserLarge } from "@fortawesome/free-solid-svg-icons";
 
 function AppRegister() {
   return (
-    <Col className="mxp-10 mb-12 bg-white text-center">
-      <Row className="">
-        <Divider>
-          <h2>สมัครสมาชิก</h2>
-        </Divider>
-      </Row>
-      <Row className="">
-        <Form
-          name="basic"
-          initialValues={{ remember: true }}
-          className="w-100 pt-1 pxp-10 mb-5"
-        >
-          <Form.Item
-            label="Username"
-            name="username"
-            className="pr-12 mxp-5"
-            rules={[{ required: true, message: "Please input your username!" }]}
+    <div className="bg-white pt-5 pb-5 pxp-10">
+      <div className="col-md-12">
+        <div className="w-100">
+          <Form className="w-100">
+
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email address : </Form.Label>
+              <Form.Control type="email" placeholder="Enter email" />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password : </Form.Label>
+              <Form.Control type="password" placeholder="Password" />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Re-Password : </Form.Label>
+              <Form.Control type="password" placeholder="Re-Password" />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicUsername">
+              <Form.Label>Username : </Form.Label>
+              <Form.Control type="text" placeholder="Enter Username" />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicLastname">
+              <Form.Label>Lastname : </Form.Label>
+              <Form.Control type="text" placeholder="Enter Lastname" />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicLastname">
+              <Form.Label>Phone Number : </Form.Label>
+              <Form.Control type="number" placeholder="Phone Number" />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Gender : </Form.Label>
+              <Form.Select type="select">
+                <option value="">Male</option>
+                <option value="">Female</option>
+                <option value="">Other</option>
+              </Form.Select>
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Check me out" />
+            </Form.Group>
+
+          </Form>
+        </div>
+      </div>
+      <div className="col-md-12 pt-6">
+        <div className="text-center mb-1">
+          <Button
+            className="w-100 border-none font-size-s"
+            type="submit"
+            style={{ backgroundColor: "#17254a" }}
           >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            label="Lastname"
-            name="lastname"
-            className="pr-12 mxp-5"
-            rules={[{ required: true, message: "Please input your lastname!" }]}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            label="Password"
-            name="password"
-            className="pr-12 mxp-5"
-            rules={[{ required: true, message: "Please input your password!" }]}
-          >
-            <Input.Password />
-          </Form.Item>
-          <Form.Item
-            label="Re-enter password"
-            name="re-enter password"
-            className="pr-12 mxp-5"
-            rules={[
-              {
-                required: true,
-                message: "Please input your Re-enter password!",
-              },
-            ]}
-          >
-            <Input.Password />
-          </Form.Item>
-          <Form.Item
-            label="E-mail"
-            name="email"
-            className="pr-12 mxp-5"
-            rules={[{ required: true, message: "Please input your E-mail!" }]}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            label="Mobile phone"
-            name="mobilephone"
-            className="pr-12 mxp-5"
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item label="Gender" name="gender" className="pr-12 mxp-5">
-            <Select>
-              <Select.Option value="male">Male</Select.Option>
-              <Select.Option value="female">Female</Select.Option>
-            </Select>
-          </Form.Item>
-          <Form.Item className="pxp-15">
-            <Button
-              type="primary"
-              htmlType="submit"
-              className="w-100"
-              icon={
-                <FontAwesomeIcon
-                  icon={faUserLarge}
-                  size="1x"
-                  className="pr-3"
-                />
-              }
-            >
-              ลงทะเบียน
-            </Button>
-          </Form.Item>
-        </Form>
-      </Row>
-    </Col>
+            <FontAwesomeIcon icon={faUserLarge} size="1x" className="pr-3" />
+            ลงทะเบียน
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 }
 

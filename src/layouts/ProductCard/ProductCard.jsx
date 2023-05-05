@@ -67,9 +67,9 @@ function ProductCard() {
     >
       {items.map((Get, key) => (
         <SwiperSlide key={key}>
-          <Card className="shadow rounded-lg">
+          <Card className="shadow">
             <a href="">
-              <Card.Img src={Get.coverimage} className="pa-1" />
+              <Card.Img src={Get.coverimage} />
             </a>
             <Card.Body>
               <Card.Title className="font-size-m" >{Get.name}</Card.Title>
