@@ -13,7 +13,7 @@ function NavbarPage() {
     <div className="pxp-10">
       <Navbar expand="lg">
         <Navbar.Toggle aria-controls="navbarScroll" className="mx-0 ml-auto w-100"/>
-        <Navbar.Collapse id="navbarScroll" className="">
+        <Navbar.Collapse id="navbarScroll" className="w-100">
           <Nav
             className="mr-auto my-2 my-lg-0 w-100"
             style={{ maxHeight: "100px" }}
@@ -29,7 +29,7 @@ function NavbarPage() {
                 </Nav.Link>
               ))}
             {/* <Nav className="my-2 my-lg-0"> */}
-              <Nav.Link
+              {/* <Nav.Link
                 className="font-size-s"
                 onClick={() => NavigateTo("register")}
               >
@@ -41,7 +41,7 @@ function NavbarPage() {
                 onClick={() => NavigateTo("login")}
               >
                 เข้าสู่ระบบ
-              </Nav.Link>
+              </Nav.Link> */}
             {/* </Nav> */}
           </Nav>
         </Navbar.Collapse>

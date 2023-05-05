@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -29,6 +30,11 @@ function ProductCard() {
     }
   };
 
+  const navigate = useNavigate();
+  const NavigateTo = (urlpath) => {
+    navigate("/" + urlpath.toLocaleLowerCase());
+  };
+
   return (
     <Swiper
       slidesPerView={4}
@@ -36,15 +42,9 @@ function ProductCard() {
       navigation={true}
       autoplay={{
         delay: 2500,
-        disableOnInteraction: false,
       }}
-      pagination={{
-        type: "fraction",
-      }}
+      // pagination={true}
       loop={true}
-      history={{
-        key: "slide",
-      }}
       breakpoints={{
         200: {
           slidesPerView: 1,
@@ -63,35 +63,33 @@ function ProductCard() {
           spaceBetween: 5,
         },
       }}
-      modules={[Pagination, History, Navigation, Autoplay]}
-      className="mySwiper"
+      modules={[Pagination, Navigation, Autoplay]}
     >
-      {/* {items.map((Get, index) => (
-        <SwiperSlide>
-          <Card>
-            <Card.Img variant="top" src={Get.coverimage} />
+      {items.map((Get, key) => (
+        <SwiperSlide key={key}>
+          <Card className="shadow rounded-lg">
+            <a href="">
+              <Card.Img src={Get.coverimage} className="pa-1" />
+            </a>
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Card.Title className="font-size-m" >{Get.name}</Card.Title>
+              <div className="text-left overflow-auto max-height-50 min-height-50 font-size-x">
+                <span>{Get.detail}</span>
+              </div>
+              <div className="text-danger font-weight-black m-2 text-right">
+                <span> ราคา {Get.id} .-</span>
+              </div>
+              <Button
+                className="w-100"
+                type="button"
+                variant="danger"
+                onClick={() => NavigateTo(Get.name)}
+              >
+                หยิบใส่ตะกร้า
+              </Button>
             </Card.Body>
           </Card>
         </SwiperSlide>
-      ))} */}
-      {items.map((Get, index) => (
-      <SwiperSlide key={index}>
-        <Card className="">
-          <Card.Img src={Get.coverimage} className="pa-1"/>
-          <Card.Body>
-            <Card.Title>{Get.name}</Card.Title>
-            <Card.Text>{Get.detail}</Card.Text>
-            <Button>หยิบใส่ตะกร้า</Button>
-          </Card.Body>
-        </Card>
-      </SwiperSlide>
       ))}
     </Swiper>
   );

@@ -1,10 +1,20 @@
 import React from "react";
 import { Popover, Badge } from "antd";
-import { Navbar, Nav, Form, FormControl, Col, Row } from "react-bootstrap";
+import {
+  Navbar,
+  Nav,
+  Form,
+  FormControl,
+  Col,
+  Row,
+  Button,
+} from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import NavbarHeadData from "../Navbar/NavbarHeadData";
+
+import Modal from "react-bootstrap/Modal";
 
 // const [order, setOrder] = useState(localStorage.getItem("Order"));
 // const [ordername, setOrdername] = useState("Hi");
@@ -38,6 +48,21 @@ function AppHeader() {
   const NavigateTo = (urlpath) => {
     navigate("/" + urlpath.toLocaleLowerCase());
   };
+  const LoginOrRegister = (
+    <div className="wp-200">
+      <Col className="w-100">
+        <Button className="w-100" onClick={() => NavigateTo("login")}>
+          <span className="font-size-s">เข้าสู่ระบบ</span>
+        </Button>
+      </Col>
+      <hr />
+      <Col className="w-100">
+        <Button className="w-100" onClick={() => NavigateTo("register")}>
+          <span className="font-size-s">สมัครสมาชิก</span>
+        </Button>
+      </Col>
+    </div>
+  );
   return (
     <div>
       <Navbar className="bg-jib pxp-10 max-height-100 w-100">
@@ -53,28 +78,29 @@ function AppHeader() {
         </Navbar.Brand>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" className="" /> */}
         {/* <Navbar.Collapse id="basic-navbar-nav"> */}
-          <Nav className="m-auto w-75">
-            <Form className="w-75">
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-sm-2"
-              />
-            </Form>
-            <Form inline className="pa-1 ml-5">
-              <Badge count={1}>
-                <Popover content={ListOrder} title={Title}>
-                  <a href="#">
-                    <FontAwesomeIcon
-                      icon={faCartShopping}
-                      size="2x"
-                      className="text-white"
-                    />
-                  </a>
-                </Popover>
-              </Badge>
-            </Form>
-          </Nav>
+        <Nav className="m-auto w-75">
+          <Form className="w-100">
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          </Form>
+          <Form inline className="pa-1 ml-5">
+            <Badge count={1}>
+              <Popover content={ListOrder} title={Title}>
+                <a href="#">
+                  <FontAwesomeIcon
+                    icon={faCartShopping}
+                    size="2x"
+                    className="text-white"
+                  />
+                </a>
+              </Popover>
+            </Badge>
+          </Form>
+          <Form inline className="pa-1 ml-5">
+            <Popover content={LoginOrRegister} placement="bottomLeft">
+              <FontAwesomeIcon icon={faUser} size="2x" className="text-white" />
+            </Popover>
+          </Form>
+        </Nav>
         {/* </Navbar.Collapse> */}
       </Navbar>
     </div>
