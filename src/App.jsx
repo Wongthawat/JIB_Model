@@ -8,25 +8,31 @@ import AppHeader from "./layouts/AppHeader/AppHeader";
 import HomeLayouts from "./layouts/AppHome/HomeLayouts";
 import AppLogin from "./layouts/AppLogin/AppLogin";
 import AppRegister from "./layouts/AppRegister/AppRegister";
-import FooterPage from "./layouts/Footer/FooterPage";
-import NavbarPage from "./layouts/Navbar/NavbarPage";
+import FooterPage from "./components/Footer/FooterPage";
+import NavbarPage from "./components/Navbar/NavbarPage";
 import ComputerSpec from "./layouts/ComputerSpec/ComputerSpec";
+import Shop from "./layouts/Shopping/Shop/Shop"
+import Cart from "./layouts/Shopping/Cart/Cart"
+import Product from "./layouts/Shopping/Product/Product";
 
 function App() {
   return (
-    <div>
-      <AppHeader />
-      <NavbarPage />
-      <div className="mxp-10 bg-white">
-        <Routes>
-          <Route path="/" element={<Navigate to="/login" />} />
-          <Route path="/home" element={<HomeLayouts />} />
-          <Route path="/login" element={<AppLogin />} />
-          <Route path="/register" element={<AppRegister />} />
-          <Route path="/computerspec" element={<ComputerSpec />} />
-        </Routes>
-      </div>
-      <FooterPage />
+    <div className="app">
+        <AppHeader />
+        <NavbarPage />
+        <div className="mxp-10 bg-white">
+          <Routes>
+            <Route path="/" element={<Navigate to="/login" />} />
+            <Route path="/home" element={<HomeLayouts />} />
+            <Route path="/login" element={<AppLogin />} />
+            <Route path="/register" element={<AppRegister />} />
+            <Route path="/computerspec" element={<ComputerSpec />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/product" element={<Product />} />
+          </Routes>
+        </div>
+        <FooterPage />
     </div>
   );
 }

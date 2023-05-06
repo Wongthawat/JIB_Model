@@ -1,53 +1,44 @@
 import React from "react";
 import { Popover, Badge } from "antd";
-import {
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Col,
-  Row,
-  Button,
-} from "react-bootstrap";
+import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import NavbarHeadData from "../Navbar/NavbarHeadData";
-
-import Modal from "react-bootstrap/Modal";
+import NavbarHeadData from "../../components/Navbar/NavbarHeadData";
 
 // const [order, setOrder] = useState(localStorage.getItem("Order"));
 // const [ordername, setOrdername] = useState("Hi");
 // const [orderSelecte, setSelect] = useState(0);
 
-const Title = (
-  <div>
-    <span>{"รายการสินค้า"}</span>
-  </div>
-);
+// const Title = (
+//   <div>
+//     <span>{"รายการสินค้า"}</span>
+//   </div>
+// );
 
-const ListOrder = (
-  <div>
-    <hr />
-    <div className="wp-300">
-      <Row>
-        <Col>
-          <span>{"คอมพิวเตอร์"}</span>
-        </Col>
-        <Col md="auto">
-          <span>{"19,400"}</span>
-        </Col>
-      </Row>
-    </div>
-    <hr />
-  </div>
-);
+// const ListOrder = (
+//   <div>
+//     <hr />
+//     <div className="wp-300">
+//       <Row>
+//         <Col>
+//           <span>{"คอมพิวเตอร์"}</span>
+//         </Col>
+//         <Col md="auto">
+//           <span>{"19,400"}</span>
+//         </Col>
+//       </Row>
+//     </div>
+//     <hr />
+//   </div>
+// );
 
 function AppHeader() {
   const navigate = useNavigate();
   const NavigateTo = (urlpath) => {
     navigate("/" + urlpath.toLocaleLowerCase());
   };
+  
   const LoginOrRegister = (
     <div className="wp-200">
       <div className="col-md-12">
@@ -85,15 +76,15 @@ function AppHeader() {
           </Form>
           <Form inline className="pa-1 ml-5">
             <Badge count={1}>
-              <Popover content={ListOrder} title={Title}>
-                <a href="#">
-                  <FontAwesomeIcon
-                    icon={faCartShopping}
-                    size="2x"
-                    className="text-white"
-                  />
-                </a>
-              </Popover>
+              {/* <Popover content={ListOrder} title={Title}> */}
+              <a href="">
+                <FontAwesomeIcon
+                  icon={faCartShopping}
+                  size="2x"
+                  className="text-white"
+                />
+              </a>
+              {/* </Popover> */}
             </Badge>
           </Form>
           <Form inline className="pa-1 ml-5">

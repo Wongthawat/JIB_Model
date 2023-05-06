@@ -2,13 +2,13 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { Carousel } from "antd";
 import { useNavigate } from "react-router-dom";
-
 import "../../assets/style/spacing.css";
 // import "../../assets/style/global.css";
 import "../../assets/style/utils.css";
 
 import ListProduct from "../ProductCard/ProductData";
 import ProductCard from "../ProductCard/ProductCard";
+import Product from "../Shopping/Product/Product";
 
 function HomeLayouts() {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ function HomeLayouts() {
   return (
     <div className="text-center bg-white">
       <div className="row mx-0">
-        <div className="col-md-6 px-0 img-500">
+        <div className="col-md-6 px-0">
           <Carousel autoplay effect="fade">
             {ListProduct.ListProImg.map((Get) => (
               <div key={Get.id}>
@@ -48,11 +48,11 @@ function HomeLayouts() {
             </Carousel>
           </div>
         </div>
-        <div className="col-md-3 px-0">
+        {/* <div className="col-md-3 px-0">
           <div className="col-md-12">
             <img src="/images/ImgTab2.webp" alt="" className="p-1" />
           </div>
-        </div>
+        </div> */}
       </div>
       {/* ----------------------------------------------------------------------------------------------- */}
       <div className="row mx-0 mb-1">
@@ -60,7 +60,7 @@ function HomeLayouts() {
           <img src="/images/title_bar.webp" alt="" className="w-100" />
         </div>
       </div>
-      <div className="px-0 mx-0">
+      <div className="border p">
         <ProductCard />
       </div>
       <Row className="w-100 mx-0 mb-1">
