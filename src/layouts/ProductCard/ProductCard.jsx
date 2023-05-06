@@ -69,7 +69,7 @@ function ProductCard() {
         <SwiperSlide key={key}>
           <Card className="shadow">
             <a href="">
-              <Card.Img src={Get.coverimage} />
+              <Card.Img src={Get.coverimage} style={{ objectFit: "cover"}}/>
             </a>
             <Card.Body>
               <Card.Title className="font-size-m" >{Get.name}</Card.Title>
