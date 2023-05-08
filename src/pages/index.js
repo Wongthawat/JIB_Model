@@ -1,0 +1,19 @@
+import CartPage from "./CartPage/CartPage.jsx";
+import CategoryProductPage from "./CategoryProductPage/CategoryProductPage.jsx";
+import HomePage from "./HomePage/HomePage.jsx";
+import LoginPage from "./LoginPage/LoginPage.jsx";
+import PageEditSpec from "./ComputerSpec/ComputerSpec.jsx";
+import ProductSignlePage from "./ProductSignlePage/ProductSignlePage.jsx";
+import RegisterPage from "./RegisterPage/RegisterPage.jsx";
+import SearchPage from "./SearchPage/SearchPage.jsx";
+
+export {
+  CartPage,
+  CategoryProductPage,
+  HomePage,
+  LoginPage,
+  PageEditSpec,
+  ProductSignlePage,
+  RegisterPage,
+  SearchPage,
+};

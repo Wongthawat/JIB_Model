@@ -10,7 +10,7 @@ import {
 import { faUserLarge } from "@fortawesome/free-solid-svg-icons";
 // import "../../assets/style/global.css";
 
-function AppLogin() {
+function LoginPage() {
   return (
     // <ThemeProvider
     //   breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm"]}
@@ -83,4 +83,4 @@ function AppLogin() {
   );
 }
 
-export default AppLogin;
+export default LoginPage;

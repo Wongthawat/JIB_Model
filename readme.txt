@@ -70,3 +70,10 @@ yarn add @fortawesome/free-brands-svg-icons
 yarn add @fortawesome/react-fontawesome@latest
 
 -------------------------------------------------------------------------------------------------
+// UseCart
+npm i react-use-cart
+yarn add npm react-use-cart
+
+import { CartProvider } from "react-use-cart";  // App...
+import { useCart } from "react-use-cart"; // Item
+

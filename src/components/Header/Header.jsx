@@ -4,7 +4,7 @@ import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import NavbarHeadData from "../../components/Navbar/NavbarHeadData";
+import { useCart } from "react-use-cart";
 
 // const [order, setOrder] = useState(localStorage.getItem("Order"));
 // const [ordername, setOrdername] = useState("Hi");
@@ -33,12 +33,20 @@ import NavbarHeadData from "../../components/Navbar/NavbarHeadData";
 //   </div>
 // );
 
-function AppHeader() {
+const Header = () => {
+  const {
+    isEmpty,
+    totalUniqueItems,
+    items,
+    updateItemQuantity,
+    removeItem,
+    totalItems,
+  } = useCart();
   const navigate = useNavigate();
   const NavigateTo = (urlpath) => {
     navigate("/" + urlpath.toLocaleLowerCase());
   };
-  
+
   const LoginOrRegister = (
     <div className="wp-200">
       <div className="col-md-12">
@@ -75,7 +83,7 @@ function AppHeader() {
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           </Form>
           <Form inline className="pa-1 ml-5">
-            <Badge count={1}>
+            <Badge count={totalItems}>
               {/* <Popover content={ListOrder} title={Title}> */}
               <a href="">
                 <FontAwesomeIcon
@@ -97,6 +105,6 @@ function AppHeader() {
       </Navbar>
     </div>
   );
-}
+};
 
-export default AppHeader;
+export default Header;

@@ -1,39 +1,32 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import { Navigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { CartProvider } from "react-use-cart";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import AppHeader from "./layouts/AppHeader/AppHeader";
-import HomeLayouts from "./layouts/AppHome/HomeLayouts";
-import AppLogin from "./layouts/AppLogin/AppLogin";
-import AppRegister from "./layouts/AppRegister/AppRegister";
+import { HomePage, LoginPage, RegisterPage, PageEditSpec } from "./pages/index";
+import Header from "./components/Header/Header";
 import FooterPage from "./components/Footer/FooterPage";
 import NavbarPage from "./components/Navbar/NavbarPage";
-import ComputerSpec from "./layouts/ComputerSpec/ComputerSpec";
-import Shop from "./layouts/Shopping/Shop/Shop"
-import Cart from "./layouts/Shopping/Cart/Cart"
-import Product from "./layouts/Shopping/Product/Product";
 
 function App() {
   return (
-    <div className="app">
-        <AppHeader />
+    <CartProvider className="app">
+      <BrowserRouter>
+        <Header />
         <NavbarPage />
         <div className="mxp-10 bg-white">
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />
-            <Route path="/home" element={<HomeLayouts />} />
-            <Route path="/login" element={<AppLogin />} />
-            <Route path="/register" element={<AppRegister />} />
-            <Route path="/computerspec" element={<ComputerSpec />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/product" element={<Product />} />
+            <Route path="/Home" element={<HomePage />} />
+            <Route path="/Login" element={<LoginPage />} />
+            <Route path="/Register" element={<RegisterPage />} />
+            <Route path="/ComputerSpec" element={<PageEditSpec />} />
           </Routes>
         </div>
         <FooterPage />
-    </div>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

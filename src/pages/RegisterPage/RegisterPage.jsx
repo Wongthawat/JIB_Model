@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faUserLarge } from "@fortawesome/free-solid-svg-icons";
 
-function AppRegister() {
+function RegisterPage() {
   return (
     <div className="bg-white pt-5 pb-5 pxp-10">
       <div className="col-md-12">
@@ -77,4 +77,4 @@ function AppRegister() {
   );
 }
 
-export default AppRegister;
+export default RegisterPage;
