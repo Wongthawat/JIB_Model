@@ -52,19 +52,13 @@ npm install formik --save
 import { Formik } from 'formik';
 
 -------------------------------------------------------------------------------------------------
-npm i @types/react
-npm i @types/react-dom
-
--------------------------------------------------------------------------------------------------
 //Fontawesome Install
 yarn add @fortawesome/fontawesome-svg-core
-
 
 # Free icons styles
 yarn add @fortawesome/free-solid-svg-icons
 yarn add @fortawesome/free-regular-svg-icons
 yarn add @fortawesome/free-brands-svg-icons
-
 
 # Add the React Component
 yarn add @fortawesome/react-fontawesome@latest
@@ -77,3 +71,10 @@ yarn add npm react-use-cart
 import { CartProvider } from "react-use-cart";  // App...
 import { useCart } from "react-use-cart"; // Item
 
+-------------------------------------------------------------------------------------------------
+// React-Multi-Carousel
+npm i react-multi-carousel
+yarn add react-multi-carousel
+
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";

@@ -16,7 +16,7 @@ const CardPage = (props) => {
           <span>{props.desc}</span>
         </div>
         <div className="text-danger font-weight-black m-2 text-right">
-          <span> ราคา {props.price} .-</span>
+          <span className="font-size-s text-truncate"> ราคา {props.price} .-</span>
         </div>
         <div className="mt-auto">
           <Button
