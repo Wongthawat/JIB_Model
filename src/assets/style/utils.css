@@ -4,7 +4,8 @@ h1,
 h2,
 h3,
 label,
-Footer {
+Footer,
+div {
   font-family: "Mitr", sans-serif;
 }
 /* Text */
@@ -382,6 +383,11 @@ a.text-dark:focus {
   object-fit: contain;
 }
 
+.img-75 {
+  height: 75px !important;
+  object-fit: contain;
+}
+
 .img-100 {
   height: 100px !important;
   object-fit: contain;
@@ -513,6 +519,10 @@ a.text-dark:focus {
   border-radius: 0.3rem !important;
 }
 
+.rounded-xxl {
+  border-radius: 1rem !important;
+}
+
 .rounded-circle {
   border-radius: 50% !important;
 }
@@ -600,6 +610,10 @@ a.text-dark:focus {
   background-color: #666666;
 }
 
+.bg-sand {
+  background-color: #f5f5f5;
+}
+
 .bg-mine-shaft {
   background-color: #313131;
 }
@@ -650,6 +664,10 @@ a.text-dark:focus {
 
 .max-height-200 {
   max-height: 200px;
+}
+
+.max-height-250 {
+  max-height: 250px;
 }
 
 .max-height-400 {

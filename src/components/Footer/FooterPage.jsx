@@ -1,12 +1,12 @@
 import React from "react";
-import { Col, Row, Layout } from "antd";
+import { Layout } from "antd";
 import FooterData from "./FooterData";
 
 function FooterPage() {
   const { Footer } = Layout;
 
   return (
-    <div className="bg-dove-gray mt-10">
+    <div className="bg-dove-gray">
       <div className="row text-white pxp-10 border-top-bg-jibnew-4 justify-center">
         {FooterData.headFooter.map((Get, key) => (
           <div key={key} className="mt-5 col-xl-2">

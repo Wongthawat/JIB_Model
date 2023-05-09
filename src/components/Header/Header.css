@@ -1,0 +1,5 @@
+.btnTocart:hover {
+    border: 1px solid red;
+    background-color: white;
+    color: black;
+}
