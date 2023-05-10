@@ -1,5 +1,10 @@
+.btnTocart {
+    background-color: #17254a;
+    border: 1px solid #17254a;
+}
+
 .btnTocart:hover {
-    border: 1px solid red;
+    border: 1px solid #17254a;
     background-color: white;
-    color: black;
+    color: #17254a;
 }

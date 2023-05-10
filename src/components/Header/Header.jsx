@@ -48,7 +48,6 @@ const Header = () => {
       <div>
         <Button
           className="w-100 btnTocart"
-          variant="danger"
           onClick={() => NavigateTo("CartPage")}
         >
           <span>ไปที่ตะกร้า</span>

@@ -94,7 +94,9 @@ const CartPage = () => {
               </div>
               <hr />
               <div className="row px-4">
-                <Button className="" variant="danger">สั่งซื้อ</Button>
+                <Button className="" variant="danger">
+                  สั่งซื้อ
+                </Button>
               </div>
             </div>
           </div>
