@@ -20,26 +20,24 @@ const Header = () => {
   };
 
   const ListOrder = (
-    <div>
+    <div className="">
       <hr />
       {items.map((item, index) => (
         <div className="col-md-12 col-sm-12" key={index}>
           <div className="row mx-0 justify-center align-center">
-            <div className="col-md-12 col-lg-3 text-center">
-              <img src={item.productImage} className="img-50" />
+            <div className="col-md-12 col-lg-4 text-center px-0">
+              <img src={item.images[0]} className="img-50" />
             </div>
-            <div className="col-md-12 col-lg-3">
+            <div className="col-md-12 col-lg-4">
               <div className="text-truncate text-center font-size-x">
-                {item.productName}
+                {item.title}
               </div>
             </div>
-            <div className="col-md-12 col-lg-4 text-center">
+            <div className="col-md-12 col-lg-3 text-center">
               <div className="text-danger font-size-x">฿ {item.price} .-</div>
             </div>
-            <div className="col-md-12 col-lg-2 text-center">
-              <div className="row">
-                <div className="font-size-x col-4">{item.quantity}</div>
-              </div>
+            <div className="col-md-12 col-lg-1 text-center">
+                <div className="font-size-x col-12">{item.quantity}</div>
             </div>
           </div>
           <hr />
@@ -76,13 +74,11 @@ const Header = () => {
           <Form inline className="pa-1 ml-5">
             <Badge count={totalItems}>
               <Popover content={ListOrder} title="สินค้าที่พึ่งเพิ่มเข้าไป">
-                <a onClick={() => NavigateTo("CartPage")}>
-                  <FontAwesomeIcon
-                    icon={faCartShopping}
-                    size="2x"
-                    className="text-white"
-                  />
-                </a>
+                <FontAwesomeIcon
+                  icon={faCartShopping}
+                  size="2x"
+                  className="text-white"
+                />
               </Popover>
             </Badge>
           </Form>

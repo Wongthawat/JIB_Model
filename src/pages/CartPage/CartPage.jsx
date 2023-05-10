@@ -27,11 +27,11 @@ const CartPage = () => {
               <div className="col-md-12 col-sm-12" key={index}>
                 <div className="row mx-0 justify-center align-center">
                   <div className="col-md-12 col-lg-2 text-center">
-                    <img src={item.productImage} className="img-75" />
+                    <img src={item.images[0]} className="img-75" />
                   </div>
                   <div className="col-md-12 col-lg-4">
                     <div className="text-truncate text-center font-size-s">
-                      {item.productName}
+                      {item.title}
                     </div>
                   </div>
                   <div className="col-md-12 col-lg-3 text-center">

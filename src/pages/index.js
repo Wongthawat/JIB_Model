@@ -6,6 +6,7 @@ import PageEditSpec from "./ComputerSpec/ComputerSpec.jsx";
 import ProductSignlePage from "./ProductSignlePage/ProductSignlePage.jsx";
 import RegisterPage from "./RegisterPage/RegisterPage.jsx";
 import SearchPage from "./SearchPage/SearchPage.jsx";
+import ServicesComplaints from "./ServicesComplaints/ServicesComplaints.jsx"
 
 export {
   CartPage,
@@ -16,4 +17,5 @@ export {
   ProductSignlePage,
   RegisterPage,
   SearchPage,
+  ServicesComplaints
 };

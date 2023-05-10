@@ -7,7 +7,8 @@ import "../../assets/style/utils.css";
 
 import ListProduct from "../../data/ItemImg";
 import CarouselCard from "../../components/CarouselCard/CarouselCard";
-import SpinnerLoad from "../../components/Spinner/SpinnerLoad"
+import CarouselCard2 from "../../components/CarouselCard/CarouselCard2";
+import SpinnerLoad from "../../components/Spinner/SpinnerLoad";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -18,6 +19,26 @@ const HomePage = () => {
   return (
     <div className="text-center bg-white">
       <div className="row mx-0">
+        <div className="col-md-3 px-0">
+          {/* <div className="col-md-12">
+            <Carousel autoplay effect="fade">
+              {ListProduct.ListProImg3.map((Get) => (
+                <div key={Get.id}>
+                  <img src={Get.PictureProduct} alt="" className="p-1 w-100" />
+                </div>
+              ))}
+            </Carousel>
+          </div>
+          <div className="col-md-12">
+            <Carousel autoplay effect="fade">
+              {ListProduct.ListProImg2.map((Get) => (
+                <div key={Get.id}>
+                  <img src={Get.PictureProduct} alt="" className="p-1 w-100" />
+                </div>
+              ))}
+            </Carousel>
+          </div> */}
+        </div>
         <div className="col-md-6 px-0">
           <Carousel autoplay effect="fade">
             {ListProduct.ListProImg.map((Get) => (
@@ -55,12 +76,15 @@ const HomePage = () => {
         </div>
       </div>
       <div className="">
-        <CarouselCard />  
+        <CarouselCard />
       </div>
       <div className="row mx-0 mb-1 mt-3">
         <div className="px-0">
           <img src="/images/title_bar2.webp" alt="" className="w-100 mt-1" />
         </div>
+      </div>
+      <div>
+        <CarouselCard2 />
       </div>
     </div>
   );

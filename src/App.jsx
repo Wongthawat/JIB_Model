@@ -13,6 +13,7 @@ import {
   CategoryProductPage,
   ProductSignlePage,
   SearchPage,
+  ServicesComplaints
 } from "./pages/index";
 import Header from "./components/Header/Header";
 import FooterPage from "./components/Footer/FooterPage";
@@ -24,7 +25,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <NavbarPage />
-        <div className="mxp-10 bg-white">
+        <div className="mxp-10 bg-white mb-10">
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />
             <Route path="/Home" element={<HomePage />} />
@@ -32,6 +33,7 @@ function App() {
             <Route path="/Register" element={<RegisterPage />} />
             <Route path="/ComputerSpec" element={<PageEditSpec />} />
             <Route path="/CartPage" element={<CartPage />} />
+            <Route path="/ServicesComplaints" element={<ServicesComplaints />} />
           </Routes>
         </div>
         <FooterPage />

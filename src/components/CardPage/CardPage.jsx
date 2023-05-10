@@ -7,13 +7,18 @@ const CardPage = (props) => {
 
   return (
     <Card className="w-100">
-      <Card.Img src={props.img} className="shadow-sm pa-4" />
+      <Card.Img src={props.img} className="shadow-sm pa-4 img-200" />
       <Card.Body>
         <div className="text-truncate font-size-s" style={{ height: 20 }}>
           <span>{props.title}</span>
         </div>
         <div className="text-truncate text-left font-size-x">
           <span>{props.desc}</span>
+        </div>
+        <div className="font-weight-black m-2 text-right">
+          <span className="font-size-s text-truncate">
+            คงเหลือ {props.stock}
+          </span>
         </div>
         <div className="text-danger font-weight-black m-2 text-right">
           <span className="font-size-s text-truncate">
