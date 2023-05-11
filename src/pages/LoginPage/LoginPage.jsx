@@ -27,7 +27,7 @@ function LoginPage() {
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Remember" />
+            <Form.Check type="checkbox" label="Remember" className="font-size-s"/>
           </Form.Group>
         </Form>
       </div>
@@ -73,7 +73,7 @@ function LoginPage() {
           </Button>
         </div>
         <div className="text-center">
-          <span>
+          <span className="font-size-s">
             ไม่ใช่สมาชิก ?{" "}
             <a href="" onClick={() => NavigateTo("Register")}>
               <span>สมัครสมาชิก</span>

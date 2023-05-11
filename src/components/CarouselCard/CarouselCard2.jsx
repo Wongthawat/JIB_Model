@@ -33,7 +33,7 @@ const CarouselCard2 = () => {
         itemClass="pa-1"
         // customTransition="all .5"
       >
-        {items.map((item, index) => (
+        {items.map((item) => (
           <div key={item.id}>
             <CardPage
               img={item.images[0]}

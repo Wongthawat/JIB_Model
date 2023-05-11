@@ -78,3 +78,7 @@ yarn add react-multi-carousel
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+// PRIMEREACT
+npm install primereact
+yarn add primereact

@@ -6,6 +6,7 @@ import {
   faCartShopping,
   faCircleUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { ScrollPanel } from "primereact/scrollpanel";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "react-use-cart";
 
@@ -16,14 +17,18 @@ const Header = () => {
 
   const navigate = useNavigate();
   const NavigateTo = (urlpath) => {
-    navigate("/" + urlpath.toLocaleLowerCase(true));
+    navigate("/" + urlpath.toLocaleLowerCase());
   };
 
   const ListOrder = (
     <div className="">
       <hr />
-      {items.map((item, index) => (
-        <div className="col-md-12 col-sm-12" key={index}>
+      <ScrollPanel
+              style={{ width: "100%", height: "250px" }}
+              className="custombar1"
+            >
+      {items.map((item) => (
+        <div className="col-md-12 col-sm-12" key={item.id}>
           <div className="row mx-0 justify-center align-center">
             <div className="col-md-12 col-lg-4 text-center px-0">
               <img src={item.images[0]} className="img-50" />
@@ -43,6 +48,7 @@ const Header = () => {
           <hr />
         </div>
       ))}
+      </ScrollPanel>
       <div>
         <Button
           className="w-100 btnTocart"
@@ -67,12 +73,12 @@ const Header = () => {
             />
           </a>
         </Navbar.Brand>
-        <Nav className="m-auto w-75">
+        <Nav className="m-auto w-100">
           <Form className="w-100">
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           </Form>
           <Form inline className="pa-1 ml-5">
-            <Badge count={totalItems}>
+            <Badge count={totalItems} className="">
               <Popover content={ListOrder} title="สินค้าที่พึ่งเพิ่มเข้าไป">
                 <FontAwesomeIcon
                   icon={faCartShopping}

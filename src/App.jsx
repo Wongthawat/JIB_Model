@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { CartProvider } from "react-use-cart";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "primereact/resources/themes/lara-light-indigo/theme.css";   
+import "primereact/resources/primereact.min.css";    
 
 import {
   HomePage,

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { ListGroup, Card, Button, Form } from "react-bootstrap";
-// import { useNavigate } from "react-router-dom";
+import { DataView, DataViewLayoutOptions } from "primereact/dataview";
+import { BASE_URL } from "../../utils/apiURL";
 import ListSet from "./SetSpec";
 import axios from "axios";
-import { BASE_URL } from "../../utils/apiURL";
-import CardPage from "../../components/CardPage/CardPage";
+import "primeflex/primeflex.css";
 
 function ComputerSpec() {
   const [items, setItems] = useState([]);
@@ -35,17 +35,41 @@ function ComputerSpec() {
     );
   });
 
+  const itemTemplate = (product) => {
+    return (
+      <div className="col-12 sm:col-6 lg:col-12 xl:col-3 p-1">
+        <div className="pa-3 border-1 surface-border border-round">
+          <div className="align-items-center">
+            <img className="img-200 w-100 pa-2" src={product.images[0]} />
+          </div>
+          <div className="font-size-m text-truncate text-center">
+            {product.title}
+          </div>
+          <div className="font-size-s text-truncate">{product.description}</div>
+          <div className="text-right">
+            <span className="font-size-s text-danger">{product.price} .-</span>
+          </div>
+          <div className="text-center font-size-m">
+            <Button className="w-100" variant="danger" size="sm">
+              <span className="font-size-x">ADD TO SPACE</span>
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div>
       <div className="row mx-0">
         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-3">
           <div className="col-md-12">
-            <ListGroup className="my-2 shadow p-1">
+            <ListGroup className="my-3 shadow">
               {ListSet.ListSetSpace.map((Get) => (
                 <ListGroup.Item key={Get.id}>
                   <div className="row align-center mx-0">
                     <div className="col-md-4 text-center px-0">
-                      <div className="col-md-12 bg-dark pa-3 rounded">
+                      <div className="col-md-12 bg-dark pa-1 rounded">
                         <img src={Get.PictureProduct} className="img-50" />
                       </div>
                     </div>
@@ -69,7 +93,7 @@ function ComputerSpec() {
         </div>
         <div className="col-xs-6 col-sm-6 col-md-hide col-lg-6 col-xl-8 col-xxl-9">
           <div className="col-md-12">
-            <Form className="my-3">
+            <Form className="my-3 shadow border-round">
               <Form.Group className="">
                 <Form.Control
                   type="text"
@@ -79,32 +103,13 @@ function ComputerSpec() {
                 />
               </Form.Group>
             </Form>
-            <div className="row mx-0">
-              {dataSearch.map((Get) => (
-                <div className="col-md-12 col-lg-6 col-xl-3 px-1" key={Get.id}>
-                  <Card className="w-100 text-center shadow my-1">
-                    <Card.Img
-                      variant="top"
-                      src={Get.images[0]}
-                      className="img-200 pa-2 shadow"
-                    />
-                    <Card.Body>
-                      <div className="text-truncate font-size-s">
-                        <span>{Get.title}</span>
-                      </div>
-                      <div className="text-truncate font-size-s">
-                        <span>{Get.description}</span>
-                      </div>
-                      <div className="text-right font-weight-black m-2">
-                        <span className="text-danger">{Get.price} .-</span>
-                      </div>
-                      <Button variant="danger" className="my-2 w-100" size="sm">
-                        <span className="font-size-x">ADD TO SPACE</span>
-                      </Button>
-                    </Card.Body>
-                  </Card>
-                </div>
-              ))}
+            <div className="mx-0 d-sm-inline">
+              <DataView
+                value={dataSearch}
+                itemTemplate={itemTemplate}
+                paginator
+                rows={12}
+              />
             </div>
           </div>
         </div>

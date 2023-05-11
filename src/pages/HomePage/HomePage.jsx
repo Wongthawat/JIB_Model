@@ -1,25 +1,21 @@
 import React from "react";
 import { Carousel } from "antd";
-import { useNavigate } from "react-router-dom";
-
+import MenuPage from "../../components/Menu/MenuPage";
+import { ScrollPanel } from "primereact/scrollpanel";
 import "../../assets/style/spacing.css";
 import "../../assets/style/utils.css";
-
 import ListProduct from "../../data/ItemImg";
 import CarouselCard from "../../components/CarouselCard/CarouselCard";
 import CarouselCard2 from "../../components/CarouselCard/CarouselCard2";
-import SpinnerLoad from "../../components/Spinner/SpinnerLoad";
 
 const HomePage = () => {
-  const navigate = useNavigate();
-  const NavigateTo = (urlpath) => {
-    navigate("/" + urlpath.toLocaleLowerCase());
-  };
-
   return (
     <div className="text-center bg-white">
       <div className="row mx-0">
         <div className="col-md-3 px-0">
+          <div className="col-md-12 border-none">
+            <MenuPage />
+          </div>
           {/* <div className="col-md-12">
             <Carousel autoplay effect="fade">
               {ListProduct.ListProImg3.map((Get) => (

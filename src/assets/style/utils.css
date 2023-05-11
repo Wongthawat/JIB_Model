@@ -378,6 +378,11 @@ a.text-dark:focus {
   border: 0 !important;
 }
 
+.img-25 {
+  height: 25px !important;
+  object-fit: contain;
+}
+
 .img-50 {
   height: 50px !important;
   object-fit: contain;
@@ -670,8 +675,24 @@ a.text-dark:focus {
   max-height: 250px;
 }
 
+.max-height-300 {
+  max-height: 300px;
+}
+
 .max-height-400 {
   max-height: 400px;
+}
+
+.max-height-500 {
+  max-height: 500px;
+}
+
+.max-height-550 {
+  max-height: 550px;
+}
+
+.max-height-600 {
+  max-height: 600px;
 }
 
 .min-height-25 {
