@@ -24,7 +24,7 @@ const CarouselCard2 = () => {
   }, [])
 
   return (
-    <div className="pxp-5">
+    <div className="">
       <Carousel
         responsive={Responsive}
         infinite={true}

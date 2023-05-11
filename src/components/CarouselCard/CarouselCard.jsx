@@ -9,7 +9,7 @@ import DataProduct from "../../data/ItemProduct";
 const CarouselCard = () => {
   const RemoveArrow = ["mobile", "minitablet", "tablet"];
   return (
-    <div className="pxp-5">
+    <div className="">
       <Carousel
         responsive={Responsive}
         infinite={true}

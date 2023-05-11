@@ -10,7 +10,7 @@ function NavbarPage() {
   };
 
   return (
-    <div className="pxp-10">
+    <div className="pxp-10 bg-white">
       <Navbar expand="xl">
         <Navbar.Toggle aria-controls="navbarScroll" className="mx-0 ml-auto w-100"/>
         <Navbar.Collapse id="navbarScroll" className="w-100">

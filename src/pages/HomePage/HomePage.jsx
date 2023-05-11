@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "antd";
-import MenuPage from "../../components/Menu/MenuPage";
+import MenuPage from "../../components/MenuPage/MenuPage";
 import { ScrollPanel } from "primereact/scrollpanel";
 import "../../assets/style/spacing.css";
 import "../../assets/style/utils.css";
@@ -16,24 +16,6 @@ const HomePage = () => {
           <div className="col-md-12 border-none">
             <MenuPage />
           </div>
-          {/* <div className="col-md-12">
-            <Carousel autoplay effect="fade">
-              {ListProduct.ListProImg3.map((Get) => (
-                <div key={Get.id}>
-                  <img src={Get.PictureProduct} alt="" className="p-1 w-100" />
-                </div>
-              ))}
-            </Carousel>
-          </div>
-          <div className="col-md-12">
-            <Carousel autoplay effect="fade">
-              {ListProduct.ListProImg2.map((Get) => (
-                <div key={Get.id}>
-                  <img src={Get.PictureProduct} alt="" className="p-1 w-100" />
-                </div>
-              ))}
-            </Carousel>
-          </div> */}
         </div>
         <div className="col-md-6 px-0">
           <Carousel autoplay effect="fade">
@@ -71,7 +53,7 @@ const HomePage = () => {
           <img src="/images/title_bar.webp" alt="" className="w-100" />
         </div>
       </div>
-      <div className="">
+      <div className="px-3">
         <CarouselCard />
       </div>
       <div className="row mx-0 mb-1 mt-3">
@@ -79,7 +61,7 @@ const HomePage = () => {
           <img src="/images/title_bar2.webp" alt="" className="w-100 mt-1" />
         </div>
       </div>
-      <div>
+      <div className="px-3">
         <CarouselCard2 />
       </div>
     </div>

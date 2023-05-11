@@ -79,6 +79,14 @@ yarn add react-multi-carousel
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-// PRIMEREACT
+-------------------------------------------------------------------------------------------------
+// Primereact
 npm install primereact
 yarn add primereact
+
+-------------------------------------------------------------------------------------------------
+// Semantic
+yarn add semantic-ui-react semantic-ui-css
+npm install semantic-ui-react semantic-ui-css
+
+import 'semantic-ui-css/semantic.min.css'
