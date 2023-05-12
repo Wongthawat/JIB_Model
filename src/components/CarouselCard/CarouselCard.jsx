@@ -18,7 +18,7 @@ const CarouselCard = () => {
         itemClass="pa-1"
         // customTransition="all .5"
       >
-        {DataProduct.items.map((item, index) => (
+        {DataProduct.items.map((item) => (
           <div key={item.id}>
             <CardPage
               img={item.images}

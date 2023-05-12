@@ -74,7 +74,7 @@ const Header = () => {
           </a>
         </Navbar.Brand>
         <Nav className="m-auto w-100">
-          <Form className="w-100">
+          <Form className="w-100 hidden-on-sm">
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           </Form>
           <Form inline className="pa-1 ml-5">

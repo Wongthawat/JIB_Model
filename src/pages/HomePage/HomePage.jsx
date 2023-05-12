@@ -1,10 +1,11 @@
 import React from "react";
 import { Carousel } from "antd";
 import MenuPage from "../../components/MenuPage/MenuPage";
-import { ScrollPanel } from "primereact/scrollpanel";
 import "../../assets/style/spacing.css";
 import "../../assets/style/utils.css";
 import ListProduct from "../../data/ItemImg";
+import ImagePage from "../../components/ImagePage/ImagePage";
+
 import CarouselCard from "../../components/CarouselCard/CarouselCard";
 import CarouselCard2 from "../../components/CarouselCard/CarouselCard2";
 
@@ -12,8 +13,8 @@ const HomePage = () => {
   return (
     <div className="text-center bg-white">
       <div className="row mx-0">
-        <div className="col-md-3 px-0">
-          <div className="col-md-12 border-none">
+        <div className="col-md-3 px-0 hidden-on-lg">
+          <div className="">
             <MenuPage />
           </div>
         </div>
@@ -21,7 +22,7 @@ const HomePage = () => {
           <Carousel autoplay effect="fade">
             {ListProduct.ListProImg.map((Get) => (
               <div key={Get.id}>
-                <img src={Get.PictureProduct} alt="" className="p-1 w-100" />
+                <ImagePage img={Get.PictureProduct} />
               </div>
             ))}
           </Carousel>
@@ -31,7 +32,7 @@ const HomePage = () => {
             <Carousel autoplay effect="fade">
               {ListProduct.ListProImg2.map((Get) => (
                 <div key={Get.id}>
-                  <img src={Get.PictureProduct} alt="" className="p-1 w-100" />
+                  <ImagePage img={Get.PictureProduct} />
                 </div>
               ))}
             </Carousel>
@@ -40,7 +41,27 @@ const HomePage = () => {
             <Carousel autoplay effect="fade">
               {ListProduct.ListProImg3.map((Get) => (
                 <div key={Get.id}>
-                  <img src={Get.PictureProduct} alt="" className="p-1 w-100" />
+                  <ImagePage img={Get.PictureProduct} />
+                </div>
+              ))}
+            </Carousel>
+          </div>
+        </div>
+        <div className="col-md-3 px-0 on-show-lg">
+          <div className="col-md-12 hidden-on-sm">
+            <Carousel autoplay effect="fade">
+              {ListProduct.ListProImg2.map((Get) => (
+                <div key={Get.id}>
+                  <ImagePage img={Get.PictureProduct} />
+                </div>
+              ))}
+            </Carousel>
+          </div>
+          <div className="col-md-12 hidden-on-sm">
+            <Carousel autoplay effect="fade">
+              {ListProduct.ListProImg3.map((Get) => (
+                <div key={Get.id}>
+                  <ImagePage img={Get.PictureProduct} />
                 </div>
               ))}
             </Carousel>

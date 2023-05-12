@@ -1,3 +1,22 @@
-.p-megamenu {
-    position: relative;
+@media (max-width: 576px) {
+    .hidden-on-sm {
+        display: none;
+    }
 }
+
+@media (max-width: 1200px) {
+    .hidden-on-lg {
+        display: none;
+    }
+
+    .on-show-lg {
+        display: inline;;
+    }
+}
+
+@media (min-width: 1200px) {
+    .on-show-lg {
+        display: none;
+    }
+}
+

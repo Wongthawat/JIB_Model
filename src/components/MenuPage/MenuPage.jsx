@@ -4,24 +4,15 @@ import { Menu } from "antd";
 // import { MailOutlined, SettingOutlined, AppstoreOutlined } from '@ant-design/icons';
 import { ScrollPanel } from "primereact/scrollpanel";
 import items from "./ItemMenu";
+import "./MenuPage.css"
 
 export default function MenuPage() {
-
-  // function getItem(label, key, icon, children, type) {
-  //   return {
-  //     key,
-  //     icon,
-  //     children,
-  //     label,
-  //     type,
-  //   };
-  // }
-
   const onClick = (e) => {
     console.log("click", e);
   };
+
   return (
-    <ScrollPanel className="custombar1 max-height-550 py-2 bg-sand">
+    <ScrollPanel className="custombar1 py-2 max-height-550">
       <Menu
         onClick={onClick}
         mode="inline"
