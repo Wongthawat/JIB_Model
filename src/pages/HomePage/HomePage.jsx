@@ -8,6 +8,7 @@ import ImagePage from "../../components/ImagePage/ImagePage";
 
 import CarouselCard from "../../components/CarouselCard/CarouselCard";
 import CarouselCard2 from "../../components/CarouselCard/CarouselCard2";
+import ModalPage from "../../components/Modal/ModalPage";
 
 const HomePage = () => {
   return (
@@ -85,6 +86,7 @@ const HomePage = () => {
       <div className="px-3">
         <CarouselCard2 />
       </div>
+      {/* <ModalPage /> */}
     </div>
   );
 };

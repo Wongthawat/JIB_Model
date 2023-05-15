@@ -1,11 +1,9 @@
 import React from "react";
-import { Popover, Badge } from "antd";
+import { Popover, Badge, Avatar } from "antd";
+import { UserOutlined } from "@ant-design/icons";
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCartShopping,
-  faCircleUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { ScrollPanel } from "primereact/scrollpanel";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "react-use-cart";
@@ -14,40 +12,56 @@ import "./Header.css";
 
 const Header = () => {
   const { items, totalItems } = useCart();
+  const User = JSON.parse(localStorage.getItem("userData"));
+  const token = localStorage.getItem("accessToken");
 
   const navigate = useNavigate();
   const NavigateTo = (urlpath) => {
     navigate("/" + urlpath.toLocaleLowerCase());
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("userData");
+    window.location.href = "/login";
+  };
+
+  const LoginOut = (
+    <div className="w-100">
+      <Button size="sm" variant="danger" onClick={handleLogout}>
+        Logout
+      </Button>
+    </div>
+  );
+
   const ListOrder = (
     <div className="">
       <hr />
       <ScrollPanel
-              style={{ width: "100%", height: "250px" }}
-              className="custombar1"
-            >
-      {items.map((item) => (
-        <div className="col-md-12 col-sm-12" key={item.id}>
-          <div className="row mx-0 justify-center align-center">
-            <div className="col-md-12 col-lg-4 text-center px-0">
-              <img src={item.images[0]} className="img-50" />
-            </div>
-            <div className="col-md-12 col-lg-4">
-              <div className="text-truncate text-center font-size-x">
-                {item.title}
+        style={{ width: "100%", height: "250px" }}
+        className="custombar1"
+      >
+        {items.map((item) => (
+          <div className="col-md-12 col-sm-12" key={item.id}>
+            <div className="row mx-0 justify-center align-center">
+              <div className="col-md-12 col-lg-4 text-center px-0">
+                <img src={item.images[0]} className="img-50" />
+              </div>
+              <div className="col-md-12 col-lg-4">
+                <div className="text-truncate text-center font-size-x">
+                  {item.title}
+                </div>
+              </div>
+              <div className="col-md-12 col-lg-3 text-center">
+                <div className="text-danger font-size-x">฿ {item.price} .-</div>
+              </div>
+              <div className="col-md-12 col-lg-1 text-center">
+                <div className="font-size-x col-12">{item.quantity}</div>
               </div>
             </div>
-            <div className="col-md-12 col-lg-3 text-center">
-              <div className="text-danger font-size-x">฿ {item.price} .-</div>
-            </div>
-            <div className="col-md-12 col-lg-1 text-center">
-                <div className="font-size-x col-12">{item.quantity}</div>
-            </div>
+            <hr />
           </div>
-          <hr />
-        </div>
-      ))}
+        ))}
       </ScrollPanel>
       <div>
         <Button
@@ -74,7 +88,7 @@ const Header = () => {
           </a>
         </Navbar.Brand>
         <Nav className="m-auto w-100">
-          <Form className="w-100 hidden-on-sm">
+          <Form className="w-100">
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           </Form>
           <Form inline className="pa-1 ml-5">
@@ -89,13 +103,22 @@ const Header = () => {
             </Badge>
           </Form>
           <Form inline className="pa-1 ml-5">
-            <a onClick={() => NavigateTo("Login")}>
-              <FontAwesomeIcon
-                icon={faCircleUser}
-                size="2x"
-                className="text-white"
+            {!token ? (
+              <Avatar
+                size="default"
+                icon={<UserOutlined />}
+                className="bg-gray-600"
+                onClick={() => NavigateTo("login")}
               />
-            </a>
+            ) : (
+              <Popover content={LoginOut}>
+                <Avatar
+                  size="default"
+                  className="bg-orange-200"
+                  src={User.image}
+                />
+              </Popover>
+            )}
           </Form>
         </Nav>
       </Navbar>
