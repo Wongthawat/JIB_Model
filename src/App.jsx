@@ -16,7 +16,8 @@ import {
   CategoryProductPage,
   ProductSignlePage,
   SearchPage,
-  ServicesComplaints
+  ServicesComplaints,
+  Products
 } from "./pages/index";
 import Header from "./components/Header/Header";
 import FooterPage from "./components/Footer/FooterPage";
@@ -39,6 +40,7 @@ function App() {
             <Route path="/ComputerSpec" element={<PageEditSpec />} />
             <Route path="/CartPage" element={<CartPage />} />
             <Route path="/ServicesComplaints" element={<ServicesComplaints />} />
+            <Route path="/Products" element={<Products />} />
           </Routes>
         </div>
         <FooterPage />

@@ -1,13 +1,14 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { useCart } from "react-use-cart";
+import "./CardPage.css"
 
 const CardPage = (props) => {
   const { addItem } = useCart();
 
   return (
-    <Card className="w-100">
-      <Card.Img src={props.img} className="shadow-sm pa-4 img-200" />
+    <Card className="w-100 CardBody">
+      <Card.Img src={props.img} className="shadow-sm pa-4 img-200 CardImg" />
       <Card.Body>
         <div className="text-truncate font-size-s" style={{ height: 20 }}>
           <span>{props.title}</span>

@@ -7,6 +7,7 @@ import ProductSignlePage from "./ProductSignlePage/ProductSignlePage.jsx";
 import RegisterPage from "./RegisterPage/RegisterPage.jsx";
 import SearchPage from "./SearchPage/SearchPage.jsx";
 import ServicesComplaints from "./ServicesComplaints/ServicesComplaints.jsx"
+import Products from "./Products/Products.jsx"
 
 export {
   CartPage,
@@ -17,5 +18,6 @@ export {
   ProductSignlePage,
   RegisterPage,
   SearchPage,
-  ServicesComplaints
+  ServicesComplaints,
+  Products
 };
