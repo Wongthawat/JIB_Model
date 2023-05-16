@@ -23,6 +23,7 @@ import Header from "./components/Header/Header";
 import FooterPage from "./components/Footer/FooterPage";
 import NavbarPage from "./components/Navbar/NavbarPage";
 import ModalPage from "./components/Modal/ModalPage"
+import QuarterCircle from "./components/SpeedDial/QuarterCircle";
 
 function App() {
   return (
