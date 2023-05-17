@@ -23,6 +23,10 @@ const CarouselCard2 = () => {
     Getdata();
   }, [])
 
+  const ReadProducts = (id, name) => {
+    window.location = '/product/readproduct/' + id + '/' + name
+  }
+
   return (
     <div className="">
       <Carousel
@@ -34,7 +38,7 @@ const CarouselCard2 = () => {
         // customTransition="all .5"
       >
         {items.map((item) => (
-          <div key={item.id}>
+          <div key={item.id} onClick={() => ReadProducts(item.id, item.title)}>
             <CardPage
               img={item.images[0]}
               title={item.title}

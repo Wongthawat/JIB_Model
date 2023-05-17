@@ -45,7 +45,7 @@ const Header = () => {
           <div className="col-md-12 col-sm-12" key={item.id}>
             <div className="row mx-0 justify-center align-center">
               <div className="col-md-12 col-lg-4 text-center px-0">
-                <img src={item.images[0]} className="img-50" />
+                <img src={item.thumbnail} className="img-50" />
               </div>
               <div className="col-md-12 col-lg-4">
                 <div className="text-truncate text-center font-size-x">

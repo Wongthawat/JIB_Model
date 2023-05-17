@@ -2,7 +2,7 @@ const ProductItems = {
   status: "ok",
   items: [
     {
-      id: 1,
+      id: 31,
       title: "Jabra ELETE 7 PRO",
       price: 4790,
       images: ["/images/Img1.jpg"],
@@ -11,7 +11,7 @@ const ProductItems = {
       stock: 10
     },
     {
-      id: 2,
+      id: 32,
       title: "Case COUGAR CONQUER(PINK EDITION)",
       price: 7990,
       images: ["/images/Img2.jpg"],
@@ -20,7 +20,7 @@ const ProductItems = {
       stock: 5
     },
     {
-      id: 3,
+      id: 33,
       title: "Mouse NUBWO LEDOLF",
       price: 109,
       images: ["/images/Img3.jpg"],
@@ -29,7 +29,7 @@ const ProductItems = {
       stock: 21
     },
     {
-      id: 4,
+      id: 34,
       title: "NOTEBOOK DELL",
       price: 33990,
       images: ["/images/Img4.jpg"],
@@ -38,7 +38,7 @@ const ProductItems = {
       stock: 9
     },
     {
-      id: 5,
+      id: 35,
       title: "Jabra ELETE 4 ACTIVE",
       price: 2961,
       images: ["/images/Img5.jpg"],
@@ -47,7 +47,7 @@ const ProductItems = {
       stock: 11
     },
     {
-      id: 6,
+      id: 36,
       title: "Apple IPhone 11 64GB",
       price: 16100,
       images: ["/images/Img6.jpg"],
@@ -56,7 +56,7 @@ const ProductItems = {
       stock: 4
     },
     {
-      id: 7,
+      id: 37,
       title: "Apple MacBook Air 2022(STARLIGHT)",
       price: 51500,
       images: ["/images/Img7.jpg"],
@@ -65,7 +65,7 @@ const ProductItems = {
       stock: 3
     },
     {
-      id: 8,
+      id: 38,
       title: "Apple MacBook Air 2022(SPACE GREY)",
       price: 40500,
       images: ["/images/Img8.jpg"],
@@ -74,7 +74,7 @@ const ProductItems = {
       stock: 3
     },
     {
-      id: 9,
+      id: 39,
       title: "Case BE Quiet Silent Base",
       price: 4490,
       images: ["/images/Img9.png"],
@@ -83,7 +83,7 @@ const ProductItems = {
       stock: 7
     },
     {
-      id: 10,
+      id: 40,
       title: "Action Camera(GOPRO HERO10 BLACK)",
       price: 14500,
       images: ["/images/Img10.jpg"],
@@ -92,7 +92,7 @@ const ProductItems = {
       stock: 13
     },
     {
-      id: 11,
+      id: 41,
       title: "Apple IPhone 13 128GB",
       price: 25900,
       images: ["/images/Img11.jpg"],

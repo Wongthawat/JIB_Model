@@ -4,6 +4,7 @@ import { useCart } from "react-use-cart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { ScrollPanel } from "primereact/scrollpanel";
+import { Image } from 'primereact/image';
 import "./CartPage.css";
 
 const CartPage = () => {
@@ -29,7 +30,7 @@ const CartPage = () => {
                 <div className="col-md-12 col-sm-12" key={index}>
                   <div className="row mx-0 justify-center align-center">
                     <div className="col-md-12 col-lg-2 text-center">
-                      <img src={item.images[0]} className="img-75" />
+                      <img src={item.thumbnail} className="img-75" />
                     </div>
                     <div className="col-md-12 col-lg-4">
                       <div className="text-truncate text-center font-size-s">
