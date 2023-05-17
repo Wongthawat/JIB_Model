@@ -40,7 +40,7 @@ const CarouselCard2 = () => {
         {items.map((item) => (
           <div key={item.id} onClick={() => ReadProducts(item.id, item.title)}>
             <CardPage
-              img={item.images[0]}
+              img={item.thumbnail}
               title={item.title}
               desc={item.description}
               item={item}
