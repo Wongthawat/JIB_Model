@@ -23,9 +23,11 @@ const CarouselCard = () => {
         // customTransition="all .5"
       >
         {DataProduct.products.map((item) => (
-          <div key={item.id} onClick={() => ReadProducts(item.id, item.title)}>
+          <div key={item.id}>
             <a>
               <CardPage
+                Idclick={item.id}
+                Nameclick={item.title}
                 img={item.thumbnail}
                 title={item.title}
                 desc={item.description}
