@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../../utils/apiURL";
+import { Rate } from "antd";
+import TabPages from "../../components/Tabs/TabPages";
 import axios from "axios";
 import "./ReadProduct.css";
 import Magnifier from "react-magnifier";
@@ -34,7 +36,7 @@ const ReadProduct = () => {
                 <h3 className="font-weight-bold">{item.title}</h3>
               </a>
             </div>
-            <div className="text-center w-100 ">
+            <div className="text-center w-100">
               <Magnifier
                 src={item.thumbnail}
                 mgShape="square"
@@ -43,12 +45,14 @@ const ReadProduct = () => {
               />
             </div>
             <div className="pt-3 pl-2">
-              <span className="font-size-m">รายละเอียดสินค้าโดยย่อ</span>
+              <span className="font-size-m"> รายละเอียดสินค้าโดยย่อ </span>
             </div>
-            <div className="pt-3 pl-2">
+            <div className="pt-3 pl-2 mr-2">
               <span className="font-size-s">{item.description}</span>
             </div>
-            <hr />
+            <div className="text-center">
+              <Rate allowHalf value={item.rating} />
+            </div>
           </div>
           <div className="col-lg-3 col-md-12 border-danger border-3 pa-5">
             <div className="row">
@@ -80,9 +84,7 @@ const ReadProduct = () => {
             </div>
             <hr />
             <div className="row mx-0">
-              <span className="font-size-s text-success font-bold">
-                ส่งฟรี
-              </span>
+              <span className="font-size-s text-success font-bold">ส่งฟรี</span>
               <div className="col-4 faMinusC text-center">
                 <FontAwesomeIcon icon={faMinus} className="text-dark" />
               </div>
@@ -150,8 +152,8 @@ const ReadProduct = () => {
           </div>
         </div>
       </div>
-      <div className="col">
-        <hr />
+      <div className="col-lg-10 col-md-10 px-0 col-offset-1 pb-5">
+        <TabPages />
       </div>
     </div>
   );

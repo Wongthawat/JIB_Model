@@ -4,12 +4,10 @@ import { useCart } from "react-use-cart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { ScrollPanel } from "primereact/scrollpanel";
-import { Image } from 'primereact/image';
 import "./CartPage.css";
 
 const CartPage = () => {
-  const { items, updateItemQuantity, removeItem, totalItems, cartTotal } =
-    useCart();
+  const { items, updateItemQuantity, removeItem, totalItems, cartTotal } = useCart();
 
   return (
     <>
@@ -46,9 +44,7 @@ const CartPage = () => {
                       <div className="row">
                         <div
                           className="col-4 faMinusC"
-                          onClick={() =>
-                            updateItemQuantity(item.id, item.quantity - 1)
-                          }
+                          onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
                         >
                           <FontAwesomeIcon
                             icon={faMinus}
@@ -60,9 +56,7 @@ const CartPage = () => {
                         </div>
                         <div
                           className="col-4 faPlusC"
-                          onClick={() =>
-                            updateItemQuantity(item.id, item.quantity + 1)
-                          }
+                          onClick={() => updateItemQuantity(item.id, item.quantity + 1)}
                         >
                           <FontAwesomeIcon
                             icon={faPlus}
@@ -74,7 +68,7 @@ const CartPage = () => {
                     <div
                       className="col-md-12 col-lg-1 text-center faCanC"
                       onClick={() => removeItem(item.id)}
-                    >
+                      >
                       <FontAwesomeIcon
                         icon={faTrashCan}
                         size="1x"

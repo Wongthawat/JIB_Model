@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { CartProvider } from "react-use-cart";
-import { ScrollTop } from "primereact/scrolltop";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
@@ -21,7 +20,6 @@ import Header from "./components/Header/Header";
 import FooterPage from "./components/Footer/FooterPage";
 import NavbarPage from "./components/Navbar/NavbarPage";
 import ModalPage from "./components/Modal/ModalPage";
-import QuarterCircle from "./components/SpeedDial/QuarterCircle";
 
 function App() {
   return (
@@ -38,10 +36,7 @@ function App() {
             <Route path="/Register" element={<RegisterPage />} />
             <Route path="/ComputerSpec" element={<PageEditSpec />} />
             <Route path="/CartPage" element={<CartPage />} />
-            <Route
-              path="/ServicesComplaints"
-              element={<ServicesComplaints />}
-            />
+            <Route path="/ServicesComplaints" element={<ServicesComplaints />} />
             <Route path="/Products" element={<Products />} />
             <Route path="/product/readproduct/:id/:name" element={<ReadProduct />} />
           </Routes>

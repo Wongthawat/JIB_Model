@@ -1,0 +1,17 @@
+[
+    {
+        "key": "1",
+        "label": "คุณสมบัติ",
+        "children": "Content of Tab คุณสมบัติ"
+    },
+    {
+        "key": "2",
+        "label": "รายละเอียดสินค้า",
+        "children": "Content of Tab รายละเอียดสินค้า"
+    },
+    {
+        "key": "3",
+        "label": "การให้คะแนนและความคิดเห็น",
+        "children": "Content of Tab การให้คะแนนและความคิดเห็น"
+    }
+]
