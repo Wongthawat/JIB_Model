@@ -35,6 +35,7 @@ const ReadProduct = () => {
               <a href="" className="no-underline text-black">
                 <h3 className="font-weight-bold">{item.title}</h3>
               </a>
+              <span><Rate allowHalf value={item.rating} /></span>
             </div>
             <div className="text-center w-100">
               <Magnifier
@@ -51,7 +52,7 @@ const ReadProduct = () => {
               <span className="font-size-s">{item.description}</span>
             </div>
             <div className="text-center">
-              <Rate allowHalf value={item.rating} />
+              
             </div>
           </div>
           <div className="col-lg-3 col-md-12 border-danger border-3 pa-5">
