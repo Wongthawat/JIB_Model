@@ -13,7 +13,7 @@ const CardPage = (props) => {
   return (
     <Card className="w-100 CardBody">
       <a onClick={() => ReadProducts(props.Idclick, props.Nameclick)}>
-        <Card.Img src={props.img} className="shadow-sm pa-4 img-200 CardImg" />
+        <Card.Img src={props.img} className="pa-4 img-200 CardImg" />
       </a>
       <Card.Body>
         <div className="text-truncate font-size-s" style={{ height: 20 }}>

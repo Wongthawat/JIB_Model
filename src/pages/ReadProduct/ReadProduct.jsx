@@ -9,6 +9,7 @@ import TabPages from "../../components/Tabs/TabPages";
 import axios from "axios";
 import "./ReadProduct.css";
 import Magnifier from "react-magnifier";
+import "./ReadProduct.css";
 
 const ReadProduct = () => {
   const { id } = useParams();
@@ -31,11 +32,13 @@ const ReadProduct = () => {
       <div className="col">
         <div className="row mx-0">
           <div className="col-lg-7 col-md-12 px-0 col-offset-1 p-2">
-            <div className="pt-2 pl-2">
+            <div className="row pt-2 pl-2">
               <a href="" className="no-underline text-black">
                 <h3 className="font-weight-bold">{item.title}</h3>
               </a>
-              <span><Rate allowHalf value={item.rating} /></span>
+              <span className="">
+                <Rate disabled allowHalf value={item.rating} />
+              </span>
             </div>
             <div className="text-center w-100">
               <Magnifier
@@ -51,8 +54,18 @@ const ReadProduct = () => {
             <div className="pt-3 pl-2 mr-2">
               <span className="font-size-s">{item.description}</span>
             </div>
-            <div className="text-center">
-              
+            <div className="px-5">
+              <hr />
+            </div>
+            <div className="px-5">
+              <div className="row pro_delivery">
+                <div className="col-2">
+                  <img src={item.thumbnail} alt="" className="w-100" />
+                </div>
+                <div className="col-10">
+                  <span className="font-size-x">{item.description}</span>
+                </div>
+              </div>
             </div>
           </div>
           <div className="col-lg-3 col-md-12 border-danger border-3 pa-5">

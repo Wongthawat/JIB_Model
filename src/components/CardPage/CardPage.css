@@ -1,3 +1,22 @@
+.CardBody {
+  border: 1px solid #eaeaea;
+}
+
 .CardBody:hover {
-  border: 2px solid black;
+  border: 1px solid #b2b2b2;
+}
+
+.CardImg {
+  transform-origin: center top ;
+  transition: transform 1s ease-out;
+  /* transition-property: transform;
+  transition-duration: 1s ;
+  transform-origin: center top ;
+  transition-timing-function: ease-out; */
+}
+
+.CardImg:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+  /* filter: saturate(150%); */
 }

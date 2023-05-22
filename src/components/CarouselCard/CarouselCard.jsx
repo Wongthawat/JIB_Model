@@ -20,6 +20,7 @@ const CarouselCard = () => {
         autoPlay={true}
         removeArrowOnDeviceType={RemoveArrow}
         itemClass="pa-1"
+        className="carousel-body"
         // customTransition="all .5"
       >
         {DataProduct.products.map((item) => (

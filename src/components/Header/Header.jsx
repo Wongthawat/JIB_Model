@@ -75,7 +75,7 @@ const Header = () => {
   );
 
   return (
-    <div>
+    <div className="">
       <Navbar className="bg-jib-new pxp-10 max-height-100 w-100">
         <Navbar.Brand className="">
           <a>
