@@ -5,10 +5,25 @@
 .pro_delivery:hover {
     cursor: pointer;
     border: 1px solid #cecece;
+    box-shadow: 4px 3px 2px black;
 }
 
 @media (max-width: 992px) {
     .pro_delivery {
         display: none;
     }
+}
+
+.Minubtn, .Plusbtn {
+    background-color: #cecece;
+    border-color: #cecece;
+    transition: transform 0.1s ease-out;
+
+}
+
+.Minubtn:hover, .Plusbtn:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+    background-color: #cecece;
+    border-color: #cecece;
 }

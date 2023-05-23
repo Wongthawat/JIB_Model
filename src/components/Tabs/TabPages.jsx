@@ -5,6 +5,7 @@ import Tabs from "react-bootstrap/Tabs";
 import items from "./TabData.json";
 
 const TabPages = () => {
+
   return (
     <>
       <Tabs className="mb-3" >

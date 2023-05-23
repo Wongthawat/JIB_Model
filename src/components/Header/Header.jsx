@@ -11,7 +11,7 @@ import { useCart } from "react-use-cart";
 import "./Header.css";
 
 const Header = () => {
-  const { items, totalItems } = useCart();
+  const { items, totalItems, cartTotal } = useCart();
   const User = JSON.parse(localStorage.getItem("userData"));
   const token = localStorage.getItem("accessToken");
 
@@ -45,7 +45,7 @@ const Header = () => {
           <div className="col-md-12 col-sm-12" key={item.id}>
             <div className="row mx-0 justify-center align-center">
               <div className="col-md-12 col-lg-4 text-center px-0">
-                <img src={item.thumbnail} className="img-50" />
+                <img src={item.thumbnail} className="img-50 Cursor" />
               </div>
               <div className="col-md-12 col-lg-4">
                 <div className="text-truncate text-center font-size-x">
@@ -78,22 +78,20 @@ const Header = () => {
     <div className="">
       <Navbar className="bg-jib-new pxp-10 max-height-100 w-100">
         <Navbar.Brand className="">
-          <a>
             <img
               alt=""
               src="/images/JIB.jpg"
-              className="max-width-100"
+              className="max-width-100 Cursor"
               onClick={() => NavigateTo("home")}
             />
-          </a>
         </Navbar.Brand>
         <Nav className="m-auto w-100">
           <Form className="w-100">
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           </Form>
-          <Form inline className="pa-1 ml-5">
+          <Form inline className="pa-1 ml-5 Cursor">
             <Badge count={totalItems} className="">
-              <Popover content={ListOrder} title="สินค้าที่พึ่งเพิ่มเข้าไป">
+              <Popover content={ListOrder} title={"สินค้าที่พึ่งเพิ่มเข้าไป"}>
                 <FontAwesomeIcon
                   icon={faCartShopping}
                   size="2x"
@@ -102,12 +100,12 @@ const Header = () => {
               </Popover>
             </Badge>
           </Form>
-          <Form inline className="pa-1 ml-5">
+          <Form inline className="pa-1 ml-5 Cursor">
             {!token ? (
               <Avatar
                 size="default"
                 icon={<UserOutlined />}
-                className="bg-gray-600"
+                className="bg-gray-600 Cursor"
                 onClick={() => NavigateTo("login")}
               />
             ) : (

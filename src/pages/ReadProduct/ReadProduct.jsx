@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../../utils/apiURL";
-import { Rate } from "antd";
+import { Rate, Input } from "antd";
+import { useCart } from "react-use-cart";
 import TabPages from "../../components/Tabs/TabPages";
 import axios from "axios";
 import "./ReadProduct.css";
@@ -14,6 +15,8 @@ import "./ReadProduct.css";
 const ReadProduct = () => {
   const { id } = useParams();
   const [item, setItem] = useState([]);
+  const [count, setCount] = useState(1);
+  const { addItem } = useCart();
 
   const Getdata = async () => {
     const response = await axios.get(`${BASE_URL}` + "products/" + id);
@@ -27,11 +30,23 @@ const ReadProduct = () => {
     Getdata();
   }, []);
 
+  const PlusCount = () => {
+    setCount(count + 1);
+  };
+
+  const MinusCount = () => {
+    let NewCount = count - 1;
+    if (NewCount < 0) {
+      NewCount = 0;
+    }
+    setCount(NewCount);
+  };
+
   return (
     <div>
       <div className="col">
         <div className="row mx-0">
-          <div className="col-lg-7 col-md-12 px-0 col-offset-1 p-2">
+          <div className="col-lg-7 col-md-12 px-0 p-2">
             <div className="row pt-2 pl-2">
               <a href="" className="no-underline text-black">
                 <h3 className="font-weight-bold">{item.title}</h3>
@@ -99,17 +114,29 @@ const ReadProduct = () => {
             <hr />
             <div className="row mx-0">
               <span className="font-size-s text-success font-bold">ส่งฟรี</span>
-              <div className="col-4 faMinusC text-center">
-                <FontAwesomeIcon icon={faMinus} className="text-dark" />
+              <div
+                className="col-4 text-center px-0"
+                onClick={() => MinusCount()}
+              >
+                <Button className="w-100 Minubtn" variant="outline-secondary">
+                  <FontAwesomeIcon icon={faMinus} className="text-dark" />
+                </Button>
               </div>
-              <div className="col-4 border rounded text-center">1</div>
-              <div className="col-4 faPlusC text-center">
-                <FontAwesomeIcon icon={faPlus} className="text-dark" />
+              <div className="col-4 px-3">
+                <Input value={count} className="text-center h-100" />
+              </div>
+              <div
+                className="col-4 text-center px-0"
+                onClick={() => PlusCount()}
+              >
+                <Button className="w-100 Plusbtn" variant="outline-secondary">
+                  <FontAwesomeIcon icon={faPlus} className="text-dark" />
+                </Button>
               </div>
             </div>
             <div className="row mx-0">
               <div className="pt-3 text-center px-0">
-                <Button className="w-50 p-1" variant="danger">
+                <Button className="w-50 p-1" variant="danger" onClick={() => addItem(item, count)}>
                   ซื้อเลย
                 </Button>
               </div>
