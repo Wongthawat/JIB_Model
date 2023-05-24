@@ -12,9 +12,8 @@ const CarouselCard2 = () => {
   const RemoveArrow = ["mobile", "minitablet", "tablet"];
 
   const Getdata = () => {
-    axios.get(BASE_URL+"products").then(result=>{
+    axios.get(BASE_URL+"products").then( result => {
         const {data} = result;
-        console.log(data)
         setItems(data.products)
     })
   }

@@ -14,16 +14,7 @@
     }
 }
 
-.Minubtn, .Plusbtn {
-    background-color: #cecece;
-    border-color: #cecece;
-    transition: transform 0.1s ease-out;
-
-}
-
-.Minubtn:hover, .Plusbtn:hover {
+.Minubtn:hover,
+.Plusbtn:hover {
     cursor: pointer;
-    transform: scale(1.1, 1.1);
-    background-color: #cecece;
-    border-color: #cecece;
 }

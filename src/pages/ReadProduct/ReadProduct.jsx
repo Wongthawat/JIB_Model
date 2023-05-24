@@ -22,7 +22,7 @@ const ReadProduct = () => {
     const response = await axios.get(`${BASE_URL}` + "products/" + id);
     if (response?.status === 200) {
       setItem(response?.data);
-      console.log(response?.data);
+      // console.log(response?.data);
     }
   };
 
@@ -122,7 +122,7 @@ const ReadProduct = () => {
                 className="col-4 text-center px-0"
                 onClick={() => MinusCount()}
               >
-                <Button className="w-100 Minubtn" variant="outline-secondary">
+                <Button className="w-100 Minubtn bg-white no-border">
                   <FontAwesomeIcon icon={faMinus} className="text-dark" />
                 </Button>
               </div>
@@ -133,7 +133,7 @@ const ReadProduct = () => {
                 className="col-4 text-center px-0"
                 onClick={() => PlusCount()}
               >
-                <Button className="w-100 Plusbtn" variant="outline-secondary">
+                <Button className="w-100 Plusbtn bg-white no-border">
                   <FontAwesomeIcon icon={faPlus} className="text-dark" />
                 </Button>
               </div>

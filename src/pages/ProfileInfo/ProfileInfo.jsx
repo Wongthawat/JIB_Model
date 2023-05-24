@@ -46,7 +46,7 @@ const ProfileInfo = () => {
           <Avatar
             size={{ xxl: 120, xl: 100, lg: 100, md: 80, sm: 60, xs: 60 }}
             src={items.image}
-            className="AvatarImg"
+            className="AvatarImg bg-orange-200"
           />
         </div>
         <div className="pxp-15">

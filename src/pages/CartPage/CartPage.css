@@ -1,7 +1,7 @@
 .faPlusC:hover,
 .faMinusC:hover,
 .faCanC:hover {
-  border-bottom: 2px solid darkred;
+  cursor: pointer;
 }
 
 .custombar1 .p-scrollpanel-wrapper {
@@ -16,3 +16,12 @@
   background-color: #17254a;
 }
 
+.ItemCart {
+  transform-origin: center top;
+  transition: transform 0.3s ease-out;
+}
+
+.ItemCart:hover {
+  /* cursor: pointer; */
+  transform: scale(1.03, 1.03);
+}

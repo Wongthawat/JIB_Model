@@ -18,16 +18,16 @@
 }
 
 .btnProfile {
-  background-color: red;
-  border-color: red;
+  background-color: #17254a;
+  border-color: #17254a;
   transform-origin: center top;
   transition: transform 0.2s ease-out;
   margin-bottom: 1%;
 }
 
 .btnProfile:hover {
-  background-color: rgb(233, 0, 0);
-  border-color: rgb(233, 0, 0);
+  background-color: #17254a;
+  border-color: #17254a;
   cursor: pointer;
   transform: scale(1.1, 1.1);
 }

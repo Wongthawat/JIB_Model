@@ -22,3 +22,25 @@
   cursor: pointer;
   transform: scale(1.1, 1.1);
 }
+
+.btnProfileHeader {
+  background-color: #17254a;
+  border-color: #17254a;
+  transform-origin: center top;
+  transition: transform 0.1s ease-out;
+}
+
+.btnProfileHeader:hover {
+  transform: scale(1.1, 1.1);
+  background-color: #0b183c;
+  border-color: #0b183c;
+}
+
+.btnLogout {
+  transform-origin: center top;
+  transition: transform 0.1s ease-out;
+}
+
+.btnLogout:hover {
+  transform: scale(1.1, 1.1);
+}

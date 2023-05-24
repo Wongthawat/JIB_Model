@@ -32,10 +32,10 @@ const Header = () => {
 
   const LoginOut = (
     <div className="w-100">
-      <Button size="sm" variant="outline-info" className="w-100" onClick={() => handleProfile(User.firstName)}>
+      <Button size="sm" className="w-100 btnProfileHeader" onClick={() => handleProfile(User.firstName)}>
         Profile
       </Button>
-      <Button size="sm" variant="outline-danger" onClick={handleLogout} className="w-100 mt-1">
+      <Button size="sm" className="w-100 mt-1 btnLogout" onClick={handleLogout} type="button" variant="danger">
         Logout
       </Button>
     </div>

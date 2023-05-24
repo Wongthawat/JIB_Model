@@ -20,7 +20,6 @@ import {
 import Header from "./components/Header/Header";
 import FooterPage from "./components/Footer/FooterPage";
 import NavbarPage from "./components/Navbar/NavbarPage";
-import ModalPage from "./components/Modal/ModalPage";
 
 function App() {
   return (
@@ -28,7 +27,6 @@ function App() {
       <BrowserRouter>
         <Header />
         <NavbarPage />
-        <ModalPage />
         <div className="mxp-10 bg-white mb-10">
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />
