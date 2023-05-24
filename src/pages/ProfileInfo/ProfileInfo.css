@@ -1,0 +1,33 @@
+.AvatarImg {
+  border: 1px solid black;
+  box-shadow: 3px 3px 6px black;
+  transform-origin: center top;
+  transition: transform 0.2s ease-out;
+  margin-bottom: 1%;
+}
+
+.AvatarImg:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+}
+
+.BodyForm {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin-bottom: 3%;
+}
+
+.btnProfile {
+  background-color: red;
+  border-color: red;
+  transform-origin: center top;
+  transition: transform 0.2s ease-out;
+  margin-bottom: 1%;
+}
+
+.btnProfile:hover {
+  background-color: rgb(233, 0, 0);
+  border-color: rgb(233, 0, 0);
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+}

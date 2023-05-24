@@ -8,6 +8,7 @@ import SearchPage from "./SearchPage/SearchPage.jsx";
 import ServicesComplaints from "./ServicesComplaints/ServicesComplaints.jsx"
 import Products from "./Products/Products.jsx"
 import ReadProduct from "./ReadProduct/ReadProduct.jsx";
+import ProfileInfo from "./ProfileInfo/ProfileInfo.jsx"
 
 export {
   CartPage,
@@ -19,5 +20,6 @@ export {
   SearchPage,
   ServicesComplaints,
   Products,
-  ReadProduct
+  ReadProduct,
+  ProfileInfo
 };

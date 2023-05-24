@@ -40,7 +40,7 @@ function LoginPage() {
         password: pwd,
       });
       if (response.status === 200) {
-        console.log(response.data);
+        // console.log(response?.data);
         window.localStorage.setItem('accessToken', response?.data?.token);
         window.localStorage.setItem('userData', JSON.stringify(response?.data))
         window.location.href = "/home";

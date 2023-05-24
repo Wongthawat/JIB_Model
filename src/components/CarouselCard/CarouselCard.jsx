@@ -9,9 +9,6 @@ import DataProduct from "../../data/DataProduct";
 const CarouselCard = () => {
   const RemoveArrow = ["mobile", "minitablet", "tablet"];
 
-  const ReadProducts = (id, name) => {
-    window.location = "/product/readproduct/" + id + "/" + name;
-  };
   return (
     <div className="">
       <Carousel
@@ -25,7 +22,6 @@ const CarouselCard = () => {
       >
         {DataProduct.products.map((item) => (
           <div key={item.id}>
-            <a>
               <CardPage
                 Idclick={item.id}
                 Nameclick={item.title}
@@ -37,7 +33,6 @@ const CarouselCard = () => {
                 price={item.price}
                 namebtn={"หยิบใส่ตะกร้า"}
               />
-            </a>
           </div>
         ))}
       </Carousel>

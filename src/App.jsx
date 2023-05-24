@@ -15,6 +15,7 @@ import {
   ServicesComplaints,
   Products,
   ReadProduct,
+  ProfileInfo,
 } from "./pages/index";
 import Header from "./components/Header/Header";
 import FooterPage from "./components/Footer/FooterPage";
@@ -39,6 +40,7 @@ function App() {
             <Route path="/ServicesComplaints" element={<ServicesComplaints />} />
             <Route path="/Products" element={<Products />} />
             <Route path="/product/readproduct/:id/:name" element={<ReadProduct />} />
+            <Route path="/ProfileInfo/:firstname" element={<ProfileInfo />} />
           </Routes>
         </div>
         <FooterPage />

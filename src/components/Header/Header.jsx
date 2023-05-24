@@ -11,7 +11,7 @@ import { useCart } from "react-use-cart";
 import "./Header.css";
 
 const Header = () => {
-  const { items, totalItems, cartTotal } = useCart();
+  const { items, totalItems } = useCart();
   const User = JSON.parse(localStorage.getItem("userData"));
   const token = localStorage.getItem("accessToken");
 
@@ -26,9 +26,16 @@ const Header = () => {
     window.location.href = "/login";
   };
 
+  const handleProfile = (firstname) => {
+    window.location.href = "/profileinfo/" + firstname
+  }
+
   const LoginOut = (
     <div className="w-100">
-      <Button size="sm" variant="danger" onClick={handleLogout}>
+      <Button size="sm" variant="outline-info" className="w-100" onClick={() => handleProfile(User.firstName)}>
+        Profile
+      </Button>
+      <Button size="sm" variant="outline-danger" onClick={handleLogout} className="w-100 mt-1">
         Logout
       </Button>
     </div>
@@ -89,7 +96,7 @@ const Header = () => {
           <Form className="w-100">
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           </Form>
-          <Form inline className="pa-1 ml-5 Cursor">
+          <Form className="pa-1 ml-5 TransformCursor">
             <Badge count={totalItems} className="">
               <Popover content={ListOrder} title={"สินค้าที่พึ่งเพิ่มเข้าไป"}>
                 <FontAwesomeIcon
@@ -100,19 +107,19 @@ const Header = () => {
               </Popover>
             </Badge>
           </Form>
-          <Form inline className="pa-1 ml-5 Cursor">
+          <Form className="pa-1 ml-5">
             {!token ? (
               <Avatar
                 size="default"
                 icon={<UserOutlined />}
-                className="bg-gray-600 Cursor"
+                className="bg-gray-600 TransformCursor"
                 onClick={() => NavigateTo("login")}
               />
             ) : (
               <Popover content={LoginOut}>
                 <Avatar
                   size="default"
-                  className="bg-orange-200"
+                  className="bg-orange-200 TransformCursor"
                   src={User.image}
                 />
               </Popover>

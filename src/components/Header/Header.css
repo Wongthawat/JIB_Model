@@ -1,14 +1,24 @@
 .btnTocart {
-    background-color: #17254a;
-    border: 1px solid #17254a;
+  background-color: #17254a;
+  border: 1px solid #17254a;
 }
 
 .btnTocart:hover {
-    border: 1px solid #17254a;
-    background-color: white;
-    color: #17254a;
+  border: 1px solid #17254a;
+  background-color: white;
+  color: #17254a;
 }
 
 .Cursor {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.TransformCursor {
+  transform-origin: center top;
+  transition: transform 0.2s ease-out;
+}
+
+.TransformCursor:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
 }

@@ -7,7 +7,7 @@ const CardPage = (props) => {
   const { addItem } = useCart();
 
   const ReadProducts = (id, name) => {
-    window.location = '/product/readproduct/' + id + '/' + name
+    window.location.href = '/product/readproduct/' + id + '/' + name
   }
 
   return (

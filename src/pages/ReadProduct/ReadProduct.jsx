@@ -20,7 +20,7 @@ const ReadProduct = () => {
 
   const Getdata = async () => {
     const response = await axios.get(`${BASE_URL}` + "products/" + id);
-    if (response.status === 200) {
+    if (response?.status === 200) {
       setItem(response?.data);
       console.log(response?.data);
     }
@@ -43,17 +43,21 @@ const ReadProduct = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="col">
         <div className="row mx-0">
           <div className="col-lg-7 col-md-12 px-0 p-2">
-            <div className="row pt-2 pl-2">
-              <a href="" className="no-underline text-black">
-                <h3 className="font-weight-bold">{item.title}</h3>
-              </a>
-              <span className="">
-                <Rate disabled allowHalf value={item.rating} />
-              </span>
+            <div className="row pt-2 pl-2 mx-0">
+              <div className="col-lg-9 col-md-12 px-5">
+                <a href="" className="no-underline text-black">
+                  <h4 className="font-weight-bold">{item.title}</h4>
+                </a>
+              </div>
+              <div className="px-0 col-lg-3 col-md-12 px-4">
+                <span className="">
+                  <Rate disabled allowHalf value={item.rating} />
+                </span>
+              </div>
             </div>
             <div className="text-center w-100">
               <Magnifier
@@ -74,8 +78,8 @@ const ReadProduct = () => {
             </div>
             <div className="px-5">
               <div className="row pro_delivery">
-                <div className="col-2">
-                  <img src={item.thumbnail} alt="" className="w-100" />
+                <div className="col-2 text-center">
+                  <img src={item.thumbnail} alt="" className="img-50" />
                 </div>
                 <div className="col-10">
                   <span className="font-size-x">{item.description}</span>
@@ -136,7 +140,11 @@ const ReadProduct = () => {
             </div>
             <div className="row mx-0">
               <div className="pt-3 text-center px-0">
-                <Button className="w-50 p-1" variant="danger" onClick={() => addItem(item, count)}>
+                <Button
+                  className="w-50 p-1"
+                  variant="danger"
+                  onClick={() => addItem(item, count)}
+                >
                   ซื้อเลย
                 </Button>
               </div>
@@ -196,7 +204,7 @@ const ReadProduct = () => {
       <div className="col-lg-10 col-md-10 px-0 col-offset-1 pb-5">
         <TabPages />
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,0 +1,20 @@
+.BodyRegister {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin-bottom: 3%;
+}
+
+.btnRegister {
+    background-color: #172141;
+    border-color: #172141;
+    transform-origin: center top;
+    transition: transform 0.2s ease-out;
+    margin-bottom: 1%;
+  }
+  
+  .btnRegister:hover {
+    background-color: #192548;
+    border-color: #192548;
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+  }

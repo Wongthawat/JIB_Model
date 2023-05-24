@@ -14,9 +14,7 @@ const HomePage = () => {
     <div className="text-center bg-white">
       <div className="row mx-0">
         <div className="col-md-3 px-0 hidden-on-lg">
-          <div className="">
             <MenuPage />
-          </div>
         </div>
         <div className="col-md-6 px-0">
           <Carousel autoplay effect="fade">
@@ -85,7 +83,6 @@ const HomePage = () => {
       <div className="px-3">
         <CarouselCard2 />
       </div>
-      {/* <ModalPage /> */}
     </div>
   );
 };
