@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, Form, FormControl } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import NavbarData from "./NavbarData";
 import { useNavigate } from "react-router-dom";
 
@@ -28,21 +28,6 @@ function NavbarPage() {
                   {Get.name}
                 </Nav.Link>
               ))}
-            {/* <Nav className="my-2 my-lg-0"> */}
-              {/* <Nav.Link
-                className="font-size-s"
-                onClick={() => NavigateTo("register")}
-              >
-                สมัครสมาชิก
-              </Nav.Link>
-
-              <Nav.Link
-                className="font-size-s"
-                onClick={() => NavigateTo("login")}
-              >
-                เข้าสู่ระบบ
-              </Nav.Link> */}
-            {/* </Nav> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

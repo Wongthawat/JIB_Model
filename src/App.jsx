@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { CartProvider } from "react-use-cart";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,25 +24,24 @@ import NavbarPage from "./components/Navbar/NavbarPage";
 function App() {
   return (
     <CartProvider className="app">
-      <BrowserRouter>
-        <Header />
-        <NavbarPage />
-        <div className="mxp-10 bg-white mb-10">
-          <Routes>
-            <Route path="/" element={<Navigate to="/login" />} />
-            <Route path="/Home" element={<HomePage />} />
-            <Route path="/Login" element={<LoginPage />} />
-            <Route path="/Register" element={<RegisterPage />} />
-            <Route path="/ComputerSpec" element={<PageEditSpec />} />
-            <Route path="/CartPage" element={<CartPage />} />
-            <Route path="/ServicesComplaints" element={<ServicesComplaints />} />
-            <Route path="/Products" element={<Products />} />
-            <Route path="/product/readproduct/:id/:name" element={<ReadProduct />} />
-            <Route path="/ProfileInfo/:firstname" element={<ProfileInfo />} />
-          </Routes>
-        </div>
-        <FooterPage />
-      </BrowserRouter>
+      <Header />
+      <NavbarPage />
+      <div className="mxp-10 bg-white mb-10">
+        <Routes>
+          {/* <Route path="*" element={} /> */}
+          <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/Home" element={<HomePage />} />
+          <Route path="/Login" element={<LoginPage />} />
+          <Route path="/Register" element={<RegisterPage />} />
+          <Route path="/ComputerSpec" element={<PageEditSpec />} />
+          <Route path="/CartPage" element={<CartPage />} />
+          <Route path="/ServicesComplaints" element={<ServicesComplaints />} />
+          <Route path="/Products" element={<Products />} />
+          <Route path="/product/readproduct/:id/:name" element={<ReadProduct />} />
+          <Route path="/ProfileInfo/:firstname" element={<ProfileInfo />} />
+        </Routes>
+      </div>
+      <FooterPage />
     </CartProvider>
   );
 }

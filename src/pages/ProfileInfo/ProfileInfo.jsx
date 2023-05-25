@@ -18,7 +18,7 @@ const ProfileInfo = () => {
     const response = await axios.get(`${BASE_URL}` + "user/" + GetId.id);
     if (response.status === 200) {
       setItems(response?.data);
-      console.log(response?.data);
+      console.log("Get", response?.data);
     }
   };
 
@@ -36,6 +36,7 @@ const ProfileInfo = () => {
     if (response.status === 200) {
       setItems(response?.data);
       console.log("Update", response?.data);
+      console.log("Img", uploadfile)
     }
   };
 
@@ -58,7 +59,6 @@ const ProfileInfo = () => {
                   type="text"
                   defaultValue={items.firstName}
                   onChange={(e) => setFname(e.target.value)}
-                  required={{  }}
                 />
               </Form.Group>
             </div>
@@ -106,7 +106,7 @@ const ProfileInfo = () => {
                 <Form.Control
                   type="file"
                   size="sm"
-                  onChange={(e) => setUploadfile(e.target.value)}
+                  onChange={(e) => setUploadfile(e.target.files)}
                 />
               </Form.Group>
             </div>

@@ -1,4 +1,21 @@
 .Modal-Body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.Closebtn {
+  cursor: pointer;
+  transform-origin: center top;
+  transition: transform 0.2s ease-out;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  border-radius: 50%;
+  background-color: black;
+  box-shadow: -2px 2px 5px 1px black;
+}
+
+.Closebtn:hover {
+  transform: scale(1.1, 1.1);
 }
