@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { ListGroup, Card, Button, Form } from "react-bootstrap";
-import { DataView, DataViewLayoutOptions } from "primereact/dataview";
+import { ListGroup, Button, Form } from "react-bootstrap";
+import { DataView } from "primereact/dataview";
 import { BASE_URL } from "../../utils/apiURL";
 import ListSet from "./SetSpec";
 import axios from "axios";
 import "primeflex/primeflex.css";
+import "./ComputerSpec.css";
 
 function ComputerSpec() {
   const [items, setItems] = useState([]);
@@ -37,24 +38,22 @@ function ComputerSpec() {
 
   const itemTemplate = (product) => {
     return (
-      <div className="col-12 sm:col-6 lg:col-12 xl:col-3 p-1">
-        <div className="pa-3 border-1 surface-border border-round">
-          <div className="align-items-center">
+      <div className="col-12 sm:col-6 lg:col-12 xl:col-3 p-1 list-item-spec border">
+          <div className="align-items-center img-list-spec">
             <img className="img-200 w-100 pa-2" src={product.images[0]} />
           </div>
           <div className="font-size-m text-truncate text-center">
             {product.title}
           </div>
-          <div className="font-size-s text-truncate">{product.description}</div>
+          <div className="font-size-x text-truncate">{product.description}</div>
           <div className="text-right">
-            <span className="font-size-s text-danger">{product.price} .-</span>
+            <span className="font-size-m font-bold text-danger">{product.price} .-</span>
           </div>
           <div className="text-center font-size-m">
             <Button className="w-100" variant="danger" size="sm">
               <span className="font-size-x">ADD TO SPACE</span>
             </Button>
           </div>
-        </div>
       </div>
     );
   };
@@ -66,7 +65,7 @@ function ComputerSpec() {
           <div className="col-md-12">
             <ListGroup className="my-3 shadow">
               {ListSet.ListSetSpace.map((Get) => (
-                <ListGroup.Item key={Get.id}>
+                <ListGroup.Item key={Get.id} className="list-item-select">
                   <div className="row align-center mx-0">
                     <div className="col-md-4 text-center px-0">
                       <div className="col-md-12 bg-dark pa-1 rounded">
@@ -103,7 +102,7 @@ function ComputerSpec() {
                 />
               </Form.Group>
             </Form>
-            <div className="mx-0 d-sm-inline">
+            <div className="mx-0">
               <DataView
                 value={dataSearch}
                 itemTemplate={itemTemplate}
