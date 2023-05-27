@@ -46,7 +46,7 @@ const ReadProduct = () => {
     <>
       <div className="col">
         <div className="row mx-0">
-          <div className="col-lg-7 col-md-12 px-0 p-2">
+          <div className="col-lg-7 col-md-12 px-0 p-2 offset-lg-1">
             <div className="row pt-2 pl-2 mx-0">
               <div className="col-lg-9 col-md-12 px-5">
                 <a href="" className="no-underline text-black">
