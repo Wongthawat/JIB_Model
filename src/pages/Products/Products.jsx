@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { ListGroup, Card, Button, Form } from "react-bootstrap";
-import { DataView, DataViewLayoutOptions } from "primereact/dataview";
+import { Button, Form } from "react-bootstrap";
+import { DataView } from "primereact/dataview";
 import { BASE_URL } from "../../utils/apiURL";
 import axios from "axios";
 import { useCart } from "react-use-cart";
@@ -39,9 +39,9 @@ const Products = () => {
 
   const itemTemplate = (product) => {
     return (
-      <div className="col-12 sm:col-6 lg:col-4 xl:col-3 p-1" key={product.id}>
-        <div className="pa-3 border-1 surface-border border-round">
-          <div className="align-items-center">
+      <div className="col-12 sm:col-6 lg:col-4 xl:col-3 p-1 list-items-product border" key={product.id}>
+        <div className="align-items-center">
+          <div className="align-items-center img-items-product">
             <img className="img-200 w-100 pa-2" src={product.images[0]} />
           </div>
           <div className="font-size-m text-truncate text-center">

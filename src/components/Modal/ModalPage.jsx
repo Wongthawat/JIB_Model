@@ -10,7 +10,7 @@ const ModalPage = () => {
   const handleClose = () => setShow(false);
   return (
     <div>
-      <Modal show={show} animation={false}>
+      <Modal show={show} animation={true}>
         <Modal.Body className="Modal-Body">
           <div className="row">
             <div className="">

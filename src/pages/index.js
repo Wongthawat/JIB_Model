@@ -9,6 +9,7 @@ import ServicesComplaints from "./ServicesComplaints/ServicesComplaints.jsx"
 import Products from "./Products/Products.jsx"
 import ReadProduct from "./ReadProduct/ReadProduct.jsx";
 import ProfileInfo from "./ProfileInfo/ProfileInfo.jsx"
+import BranchContact from "./BranchContact/BranchContact.jsx"
 
 export {
   CartPage,
@@ -21,5 +22,6 @@ export {
   ServicesComplaints,
   Products,
   ReadProduct,
-  ProfileInfo
+  ProfileInfo,
+  BranchContact
 };

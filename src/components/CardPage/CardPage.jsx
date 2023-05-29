@@ -11,7 +11,7 @@ const CardPage = (props) => {
   }
 
   return (
-    <Card className="w-100 CardBody">
+    <Card className="w-100 CardBody border-2">
       <a onClick={() => ReadProducts(props.Idclick, props.Nameclick)}>
         <Card.Img src={props.img} className="pa-4 img-200 CardImg" />
       </a>

@@ -1,3 +1,18 @@
 .ProductBody:hover {
-    border: 2px solid black;
+  border: 2px solid black;
+}
+
+.list-items-product:hover {
+  cursor: pointer;
+  /* transform: scale(1.01, 1.01); */
+  box-shadow: 0px 0px 5px 3px rgb(199, 199, 199);
+}
+
+.img-items-product {
+  transform-origin: center;
+  transition: transform 0.1s ease-out;
+}
+
+.img-items-product:hover {
+  transform: scale(1.05, 1.05);
 }

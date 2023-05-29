@@ -16,6 +16,7 @@ import {
   Products,
   ReadProduct,
   ProfileInfo,
+  BranchContact
 } from "./pages/index";
 import Header from "./components/Header/Header";
 import FooterPage from "./components/Footer/FooterPage";
@@ -39,6 +40,7 @@ function App() {
           <Route path="/Products" element={<Products />} />
           <Route path="/product/readproduct/:id/:name" element={<ReadProduct />} />
           <Route path="/ProfileInfo/:firstname" element={<ProfileInfo />} />
+          <Route path="/BranchContact" element={<BranchContact />} />
         </Routes>
       </div>
       <FooterPage />
