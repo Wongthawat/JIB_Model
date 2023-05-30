@@ -84,7 +84,7 @@ const HomePage = () => {
       <div className="px-3">
         <CarouselCard2 />
       </div>
-      <ModalPage />
+      {/* <ModalPage /> */}
     </div>
   );
 };
