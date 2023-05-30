@@ -23,6 +23,7 @@
     "antd": "^5.5.0",
     "axios": "^1.4.0",
     "bootstrap": "5.2.3",
+    "google-map-react": "^2.2.1",
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",
     "primereact": "^9.4.0",
